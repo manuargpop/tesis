@@ -1777,13 +1777,15 @@ class Ui_MainWindow(object):
         check2p_PA(self, MainWindow)
         check2p_PC(self, MainWindow)
 
-        def check2p_PC(self, MainWindow):
+        def check2final(self, MainWindow):
             dato1 = float(self.lineEdit_15.text())
             dato2 = float(self.lineEdit_21.text())
-            dato3 = float(self.lineEdit_17.text())
+            dato3 = dato2/dato1**2
+            self.lineEdit_IMC.setText(str(dato3))
 
 
 
+        check2final(self, MainWindow)
 
 if __name__ == "__main__":
     import sys
