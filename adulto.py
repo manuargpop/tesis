@@ -7,7 +7,8 @@
 
 
 from PyQt6 import QtCore, QtGui, QtWidgets
-
+from datetime import datetime
+from dateutil.relativedelta import relativedelta
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -1777,15 +1778,69 @@ class Ui_MainWindow(object):
         check2p_PA(self, MainWindow)
         check2p_PC(self, MainWindow)
 
-        def check2final(self, MainWindow):
+        def check2final1(self, MainWindow):
             dato1 = float(self.lineEdit_15.text())
             dato2 = float(self.lineEdit_21.text())
             dato3 = dato2/dato1**2
             self.lineEdit_IMC.setText(str(dato3))
 
+        def check2final2(self, MainWindow):
+            dato1 = float(self.lineEdit_65.text())
+            dato2 = float(self.lineEdit_75.text())
+            dato3 = dato1/dato2
+            self.lineEdit_77.setText(str(dato3))
 
+        def check2final3(self, MainWindow):
+            dato1 = float(self.lineEdit_65.text())
+            dato2 = float(self.lineEdit_15.text())
+            dato3 = dato1/dato2
+            self.lineEdit_78.setText(str(dato3))
 
-        check2final(self, MainWindow)
+        ##def tabla
+
+        def check2final5(self, MainWindow):
+            dato1 = float(self.lineEdit_21.text())
+            dato2 = float(self.lineEdit_79.text())
+            dato3 = dato1*(dato2/100)
+            self.lineEdit_80.setText(str(dato3))
+
+        ##def tabla
+
+        def check2final7(self, MainWindow):
+            dato1 = float(self.lineEdit_21.text())
+            dato2 = float(self.lineEdit_79.text())
+            dato3 = float(self.lineEdit_15.text())
+            dato4 = (dato1*(((100-dato2)/100)+6.1*(1.8*dato3)))/dato3**2
+            self.lineEdit_82.setText(str(dato3))
+
+        ##preguntar
+        ##preguntar
+
+        def check2final10(self, MainWindow):
+            dato1 = float(self.lineEdit_15.text())
+            dato2 = float(self.lineEdit_60.text())
+            dato3 = dato1/dato2
+            self.lineEdit_85.setText(str(dato3))
+
+        def check2final11(self, MainWindow):
+            dato1 = float(self.lineEdit_15.text())
+            fecha_nacimiento = datetime.strptime(self.lineEdit_9.text(), "%d/%m/%Y")
+            edad = float(relativedelta(self.lineEdit_8.text(), fecha_nacimiento))
+            print(f"{edad.years} años, {edad.months} meses y {edad.days} días")
+            dato2 = edad
+            dato3 = dato1/dato2
+            self.lineEdit_85.setText(str(dato3))
+
+        check2final1(self, MainWindow)
+        check2final2(self, MainWindow)
+        check2final3(self, MainWindow)
+        ##def tabla
+        check2final5(self, MainWindow)
+        ##def tabla
+        check2final7(self, MainWindow)
+        ##preguntar
+        ##preguntar
+        check2final10(self, MainWindow)
 
 if __name__ == "__main__":
     import sys
