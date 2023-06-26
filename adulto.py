@@ -1830,6 +1830,7 @@ class Ui_MainWindow(object):
             dato2 = edad
             dato3 = dato1/dato2
             self.lineEdit_85.setText(str(dato3))
+            #
 
         check2final1(self, MainWindow)
         check2final2(self, MainWindow)
