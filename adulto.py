@@ -1838,8 +1838,8 @@ class Ui_MainWindow(object):
             edad = float(relativedelta(self.lineEdit_8.text(), fecha_nacimiento))
             print(f"{edad.years} años, {edad.months} meses y {edad.days} días")
             dato2 = edad
-            dato3 = dato1/dato2
-            self.lineEdit_85.setText(str(dato3))
+            dato3 = dato1 - 100 - (((dato1-150)/4)+((dato2-20)/20))
+            self.lineEdit_86.setText(str(dato3))
             #
 
         check2final1(self, MainWindow)
@@ -1852,6 +1852,7 @@ class Ui_MainWindow(object):
         ##preguntar
         ##preguntar tabla
         check2final10(self, MainWindow)
+        check2final11(self, MainWindow)
 
 if __name__ == "__main__":
     import sys
