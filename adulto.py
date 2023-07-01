@@ -9,6 +9,7 @@
 from PyQt6 import QtCore, QtGui, QtWidgets
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
+from math import log
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -1796,7 +1797,16 @@ class Ui_MainWindow(object):
             dato3 = dato1/dato2
             self.lineEdit_78.setText(str(dato3))
 
-        ##def tabla
+        ##def tabla (log)
+        def check2final1(self, MainWindow):
+            dato1 = float(self.lineEdit_30.text())
+            dato2 = float(self.lineEdit_35.text())
+            dato3 = float(self.lineEdit_40.text())
+            dato4 = float(self.lineEdit_45.text())
+            dato5 = dato1+dato2+dato3+dato4
+            datolog = log(dato5)
+            dato6 = 1.1610-(0.0632*datolog)
+            ##tabla aqui usando dato 6
 
         def check2final5(self, MainWindow):
             dato1 = float(self.lineEdit_21.text())
@@ -1814,7 +1824,7 @@ class Ui_MainWindow(object):
             self.lineEdit_82.setText(str(dato3))
 
         ##preguntar
-        ##preguntar
+        ##preguntar tabla
 
         def check2final10(self, MainWindow):
             dato1 = float(self.lineEdit_15.text())
@@ -1840,7 +1850,7 @@ class Ui_MainWindow(object):
         ##def tabla
         check2final7(self, MainWindow)
         ##preguntar
-        ##preguntar
+        ##preguntar tabla
         check2final10(self, MainWindow)
 
 if __name__ == "__main__":
