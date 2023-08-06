@@ -23,3 +23,5 @@ body_fat_ranges = [5, 10, 15, 25, 50, 75, 85, 90, 95]
 
 # Find the closest body fat percentage
 closest_body_fat = min(body_fat_ranges, key=lambda x: abs(x - body_fat_percentage))
+
+print(closest_body_fat)
