@@ -2091,22 +2091,25 @@ class Ui_MainWindow(object):
 
         def check2final6(self, MainWindow):
             fecha_nacimiento = datetime.strptime(self.lineEdit_9.text(), "%d/%m/%Y")
-            percentil_u = float(self.lineEdit_79.text())
+            porcentaje_g = float(self.lineEdit_79.text())
             edad_u = float(relativedelta(self.lineEdit_8.text(), fecha_nacimiento))
-            percentil = [5, 10, 15, 25, 50, 75, 85, 90, 95]
-            edad_min = ['18', '25', '30', '35', '40', '45', '50', '55', '60', '65', '70']
-            edad_max = ['24', '29', '34', '39', '44', '49', '54', '59', '64', '69', '74']
+            edad_min = [18, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70]
+            edad_max = [24, 29, 34, 39, 44, 49, 54, 59, 64, 69, 74]
             tabla = [8, 9, 10, 12, 16, 20, 23, 25, 28], [9, 10, 11, 13, 18, 23, 25, 26, 29], [16, 17, 18, 20, 23, 26, 27, 28, 30], [15, 17, 18, 20, 23, 25, 27, 27, 29], [14, 16, 18, 21, 26, 30, 32, 34, 36], [15, 17, 19, 21, 26, 30, 32, 34, 36], [15, 17, 19, 22, 27, 31, 30, 35, 37], [15, 18, 20, 22, 27, 31, 30, 35, 37], [16, 18, 20, 22, 27, 31, 33, 35, 37], [13, 16, 18, 21, 26, 30, 33, 35, 37], [13, 16, 18, 21, 26, 30, 33, 34, 36]
-            closest_body_fat = min(percentil, key=lambda x: abs(x - percentil_u))
-            for i in percentil:
-                if closest_body_fat == i:
-                    posicion_per = percentil.index(i)
-                    for a in zip(edad_min, edad_max):
-                        # print("min: ", a[0])
-                        # print("max: ", a[1])
-                        if edad_u >= a[0] and edad_u <= a[1]:
-                            posicion_edad = edad_min.index(a[0])
-                            self.lineEdit_81.setText(str(tabla[posicion_edad][posicion_per]))
+            percentil = [5, 10, 15, 25, 50, 75, 85, 90, 95]
+
+            for edad in zip(edad_min, edad_max):
+
+                if edad_u >= edad[0] and edad_u <= edad[1]:
+
+                    posicion_edad = edad_min.index(edad[0])
+                    percentage = tabla[posicion_edad]
+
+                    for valor in percentage:
+                        closest_body_fat = min(percentage, key=lambda x: abs(x - porcentaje_g))
+                        if closest_body_fat == valor:
+                            ubicacion = percentage.index(valor)
+                            self.lineEdit_81.setText(str(percentil[ubicacion]))
 
         def check2final7(self, MainWindow):
             dato1 = float(self.lineEdit_21.text())
@@ -2115,8 +2118,36 @@ class Ui_MainWindow(object):
             dato4 = (dato1*(((100-dato2)/100)+6.1*(1.8*dato3)))/dato3**2
             self.lineEdit_82.setText(str(dato3))
 
-        ##preguntar
-        ##preguntar tabla
+
+
+        def check2final8_9(self, MainWindow):
+            dato1 = float(self.lineEdit_50.text())
+            dato2 = float(self.lineEdit_30.text())
+            dato3 = 0.31416*(dato2/10)
+            dato4 = (((dato1-dato3)**2)/(4*3.1416))-10.0
+            self.lineEdit_83.setText(str(dato4))
+
+            ##inicia el 9 y su tabla
+            fecha_nacimiento = datetime.strptime(self.lineEdit_9.text(), "%d/%m/%Y")
+            porcentaje_g = dato4
+            edad_u = float(relativedelta(self.lineEdit_8.text(), fecha_nacimiento))
+            edad_min = [18, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70]
+            edad_max = [24, 29, 34, 39, 44, 49, 54, 59, 64, 69, 74]
+            tabla = [19.5, 21.5, 22.8, 23.5, 28.3, 33.1, 36.4, 39.0, 44.2], [20.5, 21.9, 23.1, 25.2, 29.4, 34.9, 38.5, 41.9, 47.8], [21.1, 23.0, 24.2, 26.3, 30.9, 36.8, 41.2, 44.7, 51.3], [21.1, 23.4, 24.7, 27.3, 31.8, 38.7, 43.1, 46.1, 54.2], [21.3, 23.4, 25.5, 27.5, 32.3, 39.8, 45.8, 49.5, 55.8], [21.6, 23.1, 24.8, 27.4, 32.5, 39.5, 44.7, 48.4, 56.1], [22.2, 24.6, 25.7, 28.3, 33.4, 40.4, 46.1, 49.6, 55.6], [22.8, 24.7, 26.5, 28.7, 33.7, 42.3, 47.3, 52.1, 58.8], [22.4, 24.5, 26.3, 29.2, 34.5, 41.1, 45.6, 49.1, 55.1], [21.9, 24.5, 26.2, 28.9, 34.6, 41.6, 46.3, 49.6, 56.5], [22.2, 24.4, 26.0, 28.8, 34.3, 41.8, 46.4, 49.2, 54.6]
+            percentil = [5, 10, 15, 25, 50, 75, 85, 90, 95]
+
+            for edad in zip(edad_min, edad_max):
+
+                if edad_u >= edad[0] and edad_u <= edad[1]:
+
+                    posicion_edad = edad_min.index(edad[0])
+                    percentage = tabla[posicion_edad]
+
+                    for valor in percentage:
+                        closest_body_fat = min(percentage, key=lambda x: abs(x - porcentaje_g))
+                        if closest_body_fat == valor:
+                            ubicacion = percentage.index(valor)
+                            self.lineEdit_84.setText(str(percentil[ubicacion]))
 
         def check2final10(self, MainWindow):
             dato1 = float(self.lineEdit_15.text())
@@ -2141,8 +2172,7 @@ class Ui_MainWindow(object):
         check2final5(self, MainWindow)
         check2final6(self, MainWindow)
         check2final7(self, MainWindow)
-        ##preguntar
-        ##preguntar tabla
+        check2final8_9(self, MainWindow)
         check2final10(self, MainWindow)
         check2final11(self, MainWindow)
 
