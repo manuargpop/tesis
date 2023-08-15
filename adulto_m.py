@@ -2159,7 +2159,7 @@ class Ui_MainWindow(object):
             edad = float(relativedelta(self.lineEdit_8.text(), fecha_nacimiento))
             ##print(f"{edad.years} años, {edad.months} meses y {edad.days} días")
             dato2 = edad
-            dato3 = dato1 - 100 - (((dato1-150)/4)+((dato2-20)/20))
+            dato3 = dato1 - 100 - (((dato1-150)/2.5)+((dato2-20)/20))
             self.lineEdit_86.setText(str(dato3))
             #
 
