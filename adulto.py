@@ -2176,6 +2176,106 @@ class Ui_MainWindow(object):
         check2final10(self, MainWindow)
         check2final11(self, MainWindow)
 
+        def final1bonus1(self, MainWindow):
+            dato1 = float(self.lineEdit_IMC.text())
+            if dato1 < 18.5:
+                print("peso bajo")
+                final1bonus2(self, MainWindow)
+            elif 18.5 < dato1 < 24.9:
+                print("Peso saludable")
+                final1bonus2(self, MainWindow)
+            elif 18.5 < dato1 < 24.9:
+                print("Sobre peso")
+                final1bonus2(self, MainWindow)
+            elif 18.5 < dato1 < 24.9:
+                print("Obesidad, grado 1")
+                final1bonus2(self, MainWindow)
+            elif 18.5 < dato1 < 24.9:
+                print("Obesidad, grado 2")
+                final1bonus2(self, MainWindow)
+            elif 18.5 < dato1 < 24.9:
+                print("Obesidad, grado 3, obesidad morbida")
+                final1bonus2(self, MainWindow)
+            else:
+                print("error final1bonus1")
+
+        def final1bonus2(self, MainWindow):
+            dato1 = float(self.lineEdit_15.text())
+            dato2 = 18.50 * (dato1**2)
+            print("peso saludable minimo ", dato2)
+            dato3 = 24.99 * (dato1**2)
+            print("peso saludable maximo ", dato3)
+
+        def final2bonus1(self, MainWindow):
+            dato1 = float(self.lineEdit_77.text())
+            if dato1 >= 1.0:
+                print("androide")
+            elif dato1 < 1.0:
+                print("ginecoide")
+            else:
+                print("error final2bonus1")
+
+        def final7bonus1(self, MainWindow):
+            dato1 = float(self.lineEdit_82.text())
+            mlgh = [18, 20, 22, 25]
+            dato2 = min(mlgh, key=lambda x: abs(x - dato1))
+            if dato2 == 18:
+                print("Complexión ligera con poca musculatura")
+            if dato2 == 20:
+                print("Musculatura promedio")
+            if dato2 == 22:
+                print("Marcadamente musculoso ")
+            if dato2 == 25:
+                print("No se logra normalmente sin levantar pesas / Límite superior de la musculatura obtenida sin uso de agentes fármaco-lógicos, por lo que el MLG podría llegar a 40")
+            else:
+                print("error final2bonus1")
+
+        def final8_9bonus1(self, MainWindow):
+            dato1 = float(self.lineEdit_84.text())
+            if dato1 < 5:
+                print("Bajo nivel de musculatura o disminución")
+            elif dato1 in range(5, 15):
+                print("Masa muscular debajo del promedio")
+            elif dato1 in range(16, 85):
+                print("Masa muscular promedio")
+            elif dato1 in range(86, 95):
+                print("Masa muscular arriba del promedio o hipertrofia muscular ")
+            elif dato1 > 95:
+                print("Masa muscular alta - hipertrofia muscular")
+            else:
+                print("error final8_9bonus1")
+            ## aqui abajo se calcula el mmt, falta este dato de salida
+            dato2 = float(self.lineEdit_83.text())
+            dato3 = float(self.lineEdit_15.text())
+            dato4 = dato3*(0.0264+(0.0029*dato2))
+
+
+        def final10bonus1(self, MainWindow):
+            dato1 = float(self.lineEdit_85.text())
+            if dato1 > 10.4:
+                print("complexion pequeña")
+            elif dato1 in range(9.6, 10.3):
+                print("complexion mediana")
+            elif dato1 < 9.5:
+                print("complexion grande")
+
+        def final11bonus1(self, MainWindow):
+            dato1 = float(self.lineEdit_86.text())
+            dato2 = float(self.lineEdit_21.text())
+            ## abajo esta % de peso ideal, falta este dato de salida
+            dato3 = (dato2*100)/dato1
+            if dato3 < 60:
+                print("Malnutrición severa")
+            elif dato3 in range(60, 89):
+                print("Malnutrición moderada")
+            elif dato3 in range(90, 109):
+                print("Normalidad")
+            elif dato3 in range(110, 120):
+                print("Sobrepeso")
+            elif dato3 > 120:
+                print("Obesidad")
+
+
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
