@@ -28,32 +28,73 @@ def logica_mlg_atl(self, MainWindow):
     MLG_atl = (dato1*(((100-dato2)/100)+6.1*(1.8*dato3)))/dato3**2
 
 def logica_camb__iamb_atl(self, MainWindow):
-    dato1 = float(circunferencia_brazo_rela)
-    dato2 = float(pliegue_triceps)
-    dato3 = 0.31416*(dato2/10)
-    camb = (((dato1-dato3)**2)/(4*3.1416))-10.0
+    sexo = sexo
 
-    ##inicia el 9 y su tabla
-    fecha_nacimiento = datetime.strptime(self.lineEdit_9.text(), "%d/%m/%Y")
-    porcentaje_g = camb
-    edad_u = float(relativedelta(self.lineEdit_8.text(), fecha_nacimiento))
-    edad_min = [18, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70]
-    edad_max = [24, 29, 34, 39, 44, 49, 54, 59, 64, 69, 74]
-    tabla = [34.2, 37.3, 39.6, 42.7, 49.4, 57.1, 61.8, 65.0, 72.0], [36.6, 39.9, 42.4, 46.0, 53.0, 61.4, 66.1, 68.9, 74.5], [37.9, 40.9, 43.4, 47.3, 54.4, 63.2, 67.6, 70.8, 76.1], [38.5, 42.6, 44.6, 47.9, 55.3, 64.0, 69.1, 72.7, 77.6], [38.4, 42.1, 45.1, 48.7, 56.0, 64.0, 68.5, 71.6, 77.0], [37.7, 41.3, 43.7, 47.9, 55.2, 63.3, 68.4, 72.2, 76.2], [36.0, 40.0, 42.7, 46.6, 54.0, 62.7, 67.0, 70.4, 77.4], [36.5, 40.8, 42.7, 46.7, 54.3, 61.9, 66.4, 69.6, 75.1], [34.5, 38.7, 41.2, 44.9, 52.1, 60.0, 64.8, 67.5, 71.6], [31.4, 35.8, 38.4, 42.3, 49.1, 57.3, 61.2, 64.3, 69.4], [29.7, 33.8, 36.1, 40.2, 47.0, 54.6, 59.1, 62.1, 67.3]
-    percentil = [5, 10, 15, 25, 50, 75, 85, 90, 95]
+    def get_iamb(sexo):
+        if sexo == "hombre":
+            dato1 = float(circunferencia_brazo_rela)
+            dato2 = float(pliegue_triceps)
+            dato3 = 0.31416*(dato2/10)
+            camb = (((dato1-dato3)**2)/(4*3.1416))-10.0
 
-    for edad in zip(edad_min, edad_max):
+            fecha_de_nacimiento = "fecha"
+            fecha_de_medicion = "fecha m"
 
-        if edad_u >= edad[0] and edad_u <= edad[1]:
+            fecha_nacimiento = datetime.strptime(fecha_de_nacimiento, "%d/%m/%Y")
+            porcentaje_g = camb
+            edad_u = float(relativedelta(fecha_de_medicion, fecha_nacimiento))
 
-            posicion_edad = edad_min.index(edad[0])
-            percentage = tabla[posicion_edad]
+            edad_min = [18, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70]
+            edad_max = [24, 29, 34, 39, 44, 49, 54, 59, 64, 69, 74]
+            tabla = [34.2, 37.3, 39.6, 42.7, 49.4, 57.1, 61.8, 65.0, 72.0], [36.6, 39.9, 42.4, 46.0, 53.0, 61.4, 66.1, 68.9, 74.5], [37.9, 40.9, 43.4, 47.3, 54.4, 63.2, 67.6, 70.8, 76.1], [38.5, 42.6, 44.6, 47.9, 55.3, 64.0, 69.1, 72.7, 77.6], [38.4, 42.1, 45.1, 48.7, 56.0, 64.0, 68.5, 71.6, 77.0], [37.7, 41.3, 43.7, 47.9, 55.2, 63.3, 68.4, 72.2, 76.2], [36.0, 40.0, 42.7, 46.6, 54.0, 62.7, 67.0, 70.4, 77.4], [36.5, 40.8, 42.7, 46.7, 54.3, 61.9, 66.4, 69.6, 75.1], [34.5, 38.7, 41.2, 44.9, 52.1, 60.0, 64.8, 67.5, 71.6], [31.4, 35.8, 38.4, 42.3, 49.1, 57.3, 61.2, 64.3, 69.4], [29.7, 33.8, 36.1, 40.2, 47.0, 54.6, 59.1, 62.1, 67.3]
+            percentil = [5, 10, 15, 25, 50, 75, 85, 90, 95]
 
-            for valor in percentage:
-                closest_body_fat = min(percentage, key=lambda x: abs(x - porcentaje_g))
-                if closest_body_fat == valor:
-                    ubicacion = percentage.index(valor)
-                    iamb_atl = (str(percentil[ubicacion]))
+            for edad in zip(edad_min, edad_max):
+
+                if edad_u >= edad[0] and edad_u <= edad[1]:
+
+                    posicion_edad = edad_min.index(edad[0])
+                    percentage = tabla[posicion_edad]
+
+                    for valor in percentage:
+                        closest_body_fat = min(percentage, key=lambda x: abs(x - porcentaje_g))
+                        if closest_body_fat == valor:
+                            ubicacion = percentage.index(valor)
+                            iamb_atl = (str(percentil[ubicacion]))
+                            return iamb_atl
+        elif sexo == "mujer":
+            dato1 = float(circunferencia_brazo_rela)
+            dato2 = float(pliegue_triceps)
+            dato3 = 0.31416*(dato2/10)
+            camb = (((dato1-dato3)**2)/(4*3.1416))-6.5
+
+            fecha_de_nacimiento = "fecha"
+            fecha_de_medicion = "fecha m"
+
+            fecha_nacimiento = datetime.strptime(fecha_de_nacimiento, "%d/%m/%Y")
+            porcentaje_g = camb
+            edad_u = float(relativedelta(fecha_de_medicion, fecha_nacimiento))
+
+            edad_min = [18, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70]
+            edad_max = [24, 29, 34, 39, 44, 49, 54, 59, 64, 69, 74]
+            tabla = [19.5, 21.5, 22.8, 23.5, 28.3, 33.1, 36.4, 39.0, 44.2], [20.5, 21.9, 23.1, 25.2, 29.4, 34.9, 38.5, 41.9, 47.8], [21.1, 23.0, 24.2, 26.3, 30.9, 36.8, 41.2, 44.7, 51.3], [21.1, 23.4, 24.7, 27.3, 31.8, 38.7, 43.1, 46.1, 54.2], [21.3, 23.4, 25.5, 27.5, 32.3, 39.8, 45.8, 49.5, 55.8], [21.6, 23.1, 24.8, 27.4, 32.5, 39.5, 44.7, 48.4, 56.1], [22.2, 24.6, 25.7, 28.3, 33.4, 40.4, 46.1, 49.6, 55.6], [22.8, 24.7, 26.5, 28.7, 33.7, 42.3, 47.3, 52.1, 58.8], [22.4, 24.5, 26.3, 29.2, 34.5, 41.1, 45.6, 49.1, 55.1], [21.9, 24.5, 26.2, 28.9, 34.6, 41.6, 46.3, 49.6, 56.5], [22.2, 24.4, 26.0, 28.8, 34.3, 41.8, 46.4, 49.2, 54.6]
+            percentil = [5, 10, 15, 25, 50, 75, 85, 90, 95]
+
+            for edad in zip(edad_min, edad_max):
+
+                if edad_u >= edad[0] and edad_u <= edad[1]:
+
+                    posicion_edad = edad_min.index(edad[0])
+                    percentage = tabla[posicion_edad]
+
+                    for valor in percentage:
+                        closest_body_fat = min(percentage, key=lambda x: abs(x - porcentaje_g))
+                        if closest_body_fat == valor:
+                            ubicacion = percentage.index(valor)
+                            iamb_atl = (str(percentil[ubicacion]))
+                            return iamb_atl
+        
+    iamb_atle = get_iamb(sexo)
 
 def complexion_atl(self, MainWindow):
     dato1 = float(altura)
@@ -109,21 +150,21 @@ def somatotipo_atl(self, MainWindow):
 def fraccionamiento_corporal_atl(self, MainWindow):
     sexo = sexo
 
-    def getcas(sexo)
+    def getcas(sexo):
         if sexo == hombre:
             return 68.308
         elif sexo == mujer:
             return 73.074
-        else
+        else:
             print("error sexo")
             return ("error sexo")
 
-    def gettsk(sexo)
-        if sexo == hombre
+    def gettsk(sexo):
+        if sexo == hombre:
             return 2.07
-        elif sexo == mujer
+        elif sexo == mujer:
             return 1.96
-        else
+        else:
             print("error sexo")
             return ("error sexo")
 
@@ -142,7 +183,7 @@ def fraccionamiento_corporal_atl(self, MainWindow):
 
     dato3 = perimetro_cefalico
     z_osea_cabeza = (dato3 - 57) / 1.44
-    m_osea_cabeza = (z_osea_cabeza * 0.18) 1.20
+    m_osea_cabeza = (z_osea_cabeza * 0.18) + 1.20
 
     dato4 = diametro_biacromial
     dato5 = diametro_biiliocristal
