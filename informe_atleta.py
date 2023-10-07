@@ -109,7 +109,7 @@ def create_pdf_atleta(filename):
                           f"               "
                           f"{indice_esqueletico}\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
                           f"               "
-                          f"{envergadura_relativa}\n\n\n\n\n\n\n\n\n\n")
+                          f"{envergadura_relativa}")
 
     pdf.add_page()
     pdf.set_font("Helvetica", "B", 64)
@@ -117,8 +117,184 @@ def create_pdf_atleta(filename):
     pdf.y = top
     pdf.x = offset
 
-    ix = 800
-    iy = 1300
+    def imc_medic(imc):
+        fimc = float(imc)
+        if fimc < 18.5:
+            print("peso bajo")
+            return "peso bajo"
+        elif 18.5 < fimc < 24.9:
+            print("Peso saludable")
+            return "peso saludable"
+        elif 18.5 < fimc < 24.9:
+            print("Sobre peso")
+            return "sobre peso"
+        elif 18.5 < fimc < 24.9:
+            print("Obesidad, grado 1")
+            return "obesidad, grado 1"
+        elif 18.5 < fimc < 24.9:
+            print("Obesidad, grado 2")
+            return "obesidad, grado 2"
+        elif 18.5 < fimc < 24.9:
+            print("Obesidad, grado 3, obesidad morbida")
+            return "obesidad, grado 3, obesidad morbida"
+        else:
+            print("error final1bonus1")
+            return "error imc"
+
+    def mlg_medic(mlg, sexo):
+        fmlg = float(mlg)
+        if sexo == "hombre":
+            mlgh = [18, 20, 22, 25]
+            dato2 = min(mlgh, key=lambda x: abs(x - fmlg))
+            if dato2 == 18:
+                print("Complexión ligera con poca musculatura")
+                return "con complexion ligera con poca musculatura"
+            if dato2 == 20:
+                print("Musculatura promedio")
+                return "con musculatura promedio"
+            if dato2 == 22:
+                print("Marcadamente musculoso ")
+                return "marcadamente musculoso"
+            if dato2 == 25:
+                print("No se logra normalmente sin levantar pesas / Límite superior de la musculatura obtenida sin "
+                      "uso de agentes fármaco-lógicos, por lo que el MLG podría llegar a 40")
+                return f"en un rango que no se logra normalmente sin \n\n\n       " \
+                       f"levantar pesas / límite superior de la \n\n\n       " \
+                       f"musculatura obtenida sin uso de agentes \n\n\n       " \
+                       f"fármaco-lógicos, por loque el MLG podría  \n\n\n       " \
+                       f"llegar a 40"
+            else:
+                print("error final2bonus1")
+                return "error mlg"
+        elif sexo == "mujer":
+            mlgm = [13, 15, 17, 22]
+            dato2 = min(mlgm, key=lambda x: abs(x - fmlg))
+            if dato2 == 13:
+                print("Complexión ligera con poca musculatura")
+                return "con complexion ligera con poca musculatura"
+            if dato2 == 15:
+                print("Musculatura promedio")
+                return "con musculatura promedio"
+            if dato2 == 17:
+                print("Marcadamente musculoso ")
+                return "marcadamente musculosa"
+            if dato2 == 22:
+                print(
+                    "No se logra normalmente sin levantar pesas / Límite superior de la musculatura obtenida sin uso "
+                    "de agentes fármaco-lógicos, por lo que el MLG podría llegar a 40")
+                return "con medidas que no se logran normalmente \n\n\n      " \
+                       "sin levantar pesas / límite superior de \n\n\n      " \
+                       "la musculatura obtenida sin uso de \n\n\n      " \
+                       "agentes fármaco-lógicos, por lo que el \n\n\n      " \
+                       "MLG podría llegar a 40"
+            else:
+                print("error final2bonus1")
+
+    def iamb_medic(iamb):
+        fiamb = float(iamb)
+        if fiamb < 5:
+            print("Bajo nivel de musculatura o disminución")
+            return "un bajo nivel de musculatura o disminucion"
+        elif fiamb in range(5, 15):
+            print("Masa muscular debajo del promedio")
+            return "una masa muscular debajo del promedio"
+        elif fiamb in range(16, 85):
+            print("Masa muscular promedio")
+            return "una masa muscular promedio"
+        elif fiamb in range(86, 95):
+            print("Masa muscular arriba del promedio o hipertrofia muscular")
+            return "una masa muscular arriba del promedio o \n\n\n      " \
+                   "hièrtrofia muscular"
+        elif fiamb > 95:
+            print("Masa muscular alta - hipertrofia muscular")
+            return "una masa muscular alta - hipertrofia \n\n\n      " \
+                   "muscular"
+        else:
+            print("error iamb")
+            return "error iamb"
+
+    def complexion_medic(complexion, sexo):
+        fcomplexion = float(complexion)
+        if sexo == "hombre":
+            if fcomplexion > 10.4:
+                print("complexion pequeña")
+                return "complexion pequeña"
+            elif 9.6 < fcomplexion < 10.3:
+                print("complexion mediana")
+                return "complexion mediana"
+            elif fcomplexion < 9.5:
+                print("complexion grande")
+                return "complexion grande"
+        elif sexo == "mujer":
+            if fcomplexion > 10.9:
+                print("complexion pequeña")
+                return "complexion pequeña"
+            elif 9.9 < fcomplexion < 10.8:
+                print("complexion mediana")
+                return "complexion mediana"
+            elif fcomplexion < 9.8:
+                print("complexion grande")
+                return "complexion grande"
+
+    def indice_cormico_medic(sexo, indice_cormico):
+        if sexo == "hombre":
+            if indice_cormico <= 51:
+                return "Braquicórmico (Tronco corto)"
+            elif 51.1 < indice_cormico < 53:
+                return "Metricórmico (Tronco medio)"
+            elif indice_cormico >= 53.1:
+                return "Macrocórmico (Tronco largo)"
+        elif sexo == "mujer":
+            if indice_cormico <= 52:
+                return "Braquicórmico (Tronco corto)"
+            elif 52.1 < indice_cormico < 54:
+                return "Metricórmico (Tronco medio)"
+            elif indice_cormico >= 54.1:
+                return "Macrocórmico (Tronco largo)"
+
+    def longitud_relativa_medic(lonitud_relativa):
+        if longitud_relativa <= 44.9:
+            return "Braquibraquial (extremidad superior corta)"
+        elif 45 < indice_cormico < 46.9:
+            return "Mesobraquial (extremidad superior intermedia)"
+        elif indice_cormico >= 47:
+            return "Macrobraquial (extremidad superior larga)"
+
+    def indice_esqueletico_medic(indice_esqueletico):
+        if indice_esqueletico <= 84.9:
+            return "Braquiesquélico (extremidad inferior corta)"
+        elif 85 < indice_esqueletico < 89.9:
+            return "Mesoesquélico (extremidad inferior mediana)"
+        elif indice_esqueletico >= 90:
+            return "Macroesquélico (extremidad inferior larga)"
+
+    imc_info = imc_medic(imc)
+    mlg_info = mlg_medic(mlg, sexo)
+    iamb_info = iamb_medic(iamb)
+    complexion_info = complexion_medic(complexion, sexo)
+    cormico_info = indice_cormico_medic(sexo, indice_cormico)
+    long_info = longitud_relativa_medic(longitud_relativa)
+    icor_info = indice_esqueletico_medic(indice_esqueletico)
+
+    pdf.multi_cell(0, 20, f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n       "
+                          f"con un indice de masa corporal de "
+                          f"{imc} usted califica que \n\n\n       posee {imc_info}\n\n\n\n\n\n       "
+                          f"con un indice de masa libre de grasa de {mlg} usted esta \n\n\n       "
+                          f"{mlg_info}\n\n\n\n\n\n       "
+                          f"con un indice del area muscular del brazo de {iamb} \n\n\n       "
+                          f"en persentiles se puede afirmar que usted posee \n\n\n       "
+                          f"{iamb_info}\n\n\n\n\n\n       "
+                          f"con un indice de complexion de {complexion} usted posee una \n\n\n       "
+                          f"{complexion_info}\n\n\n\n\n\n       "
+                          f"con un indice cormico de {indice_cormico} usted posee una \n\n\n       "
+                          f"{cormico_info}\n\n\n\n\n\n       "
+                          f"con una longitud relativa de {longitud_relativa} usted posee una \n\n\n       "
+                          f"{long_info}\n\n\n\n\n\n       "
+                          f"con un indice esqueletico de {indice_esqueletico} usted posee una \n\n\n       "
+                          f"{icor_info}")
+
+    ix = 400
+    iy = 2000
 
     pdf.image("basura/big_good.png", ix, iy)
 
@@ -134,208 +310,6 @@ def create_pdf_atleta(filename):
 
     pdf.image("basura/dot.png", ix + 300, iy + 300)
     pdf.image("basura/dot.png", imgx, imgy)
-
-    # def imc_medic(imc):
-    #     fimc = float(imc)
-    #     if fimc < 18.5:
-    #         print("peso bajo")
-    #         return "peso bajo"
-    #     elif 18.5 < fimc < 24.9:
-    #         print("Peso saludable")
-    #         return "peso saludable"
-    #     elif 18.5 < fimc < 24.9:
-    #         print("Sobre peso")
-    #         return "sobre peso"
-    #     elif 18.5 < fimc < 24.9:
-    #         print("Obesidad, grado 1")
-    #         return "obesidad, grado 1"
-    #     elif 18.5 < fimc < 24.9:
-    #         print("Obesidad, grado 2")
-    #         return "obesidad, grado 2"
-    #     elif 18.5 < fimc < 24.9:
-    #         print("Obesidad, grado 3, obesidad morbida")
-    #         return "obesidad, grado 3, obesidad morbida"
-    #     else:
-    #         print("error final1bonus1")
-    #         return "error imc"
-    #
-    # def icc_medic(icc,sexo):
-    #     ficc = float(icc)
-    #     if sexo == "hombre":
-    #         if ficc >= 1.0:
-    #             print("androide")
-    #             return "androide"
-    #         elif ficc < 1.0:
-    #             print("ginecoide")
-    #             return "ginecoide"
-    #         else:
-    #             print("error final2bonus1")
-    #             return "error icc"
-    #     elif sexo == "mujer":
-    #         if ficc >= 0.8:
-    #             print("androide")
-    #             return "androide"
-    #         elif ficc < 0.8:
-    #             print("ginecoide")
-    #             return "ginecoide"
-    #         else:
-    #             print("error final2bonus1")
-    #             return "error icc"
-    #     else:
-    #         print("error sexo")
-    #         return "error sexo"
-    #
-    # def icc_texto(icc):
-    #     if icc == "androide":
-    #         return f"usted tiene mayor riesgo para el desarrollo de \n\n\n       " \
-    #                f"enfermedades crónico-degenerativas debido a la \n\n\n       " \
-    #                f"acumulación de grasa visceral"
-    #     elif icc == "ginecoide":
-    #         return f"usted tiene mayor riesgo problemas de retorno \n\n\n       " \
-    #                f"venoso"
-    #
-    # def mlg_medic(mlg, sexo):
-    #     fmlg = float(mlg)
-    #     if sexo == "hombre":
-    #         mlgh = [18, 20, 22, 25]
-    #         dato2 = min(mlgh, key=lambda x: abs(x - fmlg))
-    #         if dato2 == 18:
-    #             print("Complexión ligera con poca musculatura")
-    #             return "con complexion ligera con poca musculatura"
-    #         if dato2 == 20:
-    #             print("Musculatura promedio")
-    #             return "con musculatura promedio"
-    #         if dato2 == 22:
-    #             print("Marcadamente musculoso ")
-    #             return "marcadamente musculoso"
-    #         if dato2 == 25:
-    #             print("No se logra normalmente sin levantar pesas / Límite superior de la musculatura obtenida sin "
-    #                   "uso de agentes fármaco-lógicos, por lo que el MLG podría llegar a 40")
-    #             return f"en un rango que no se logra normalmente sin \n\n\n       " \
-    #                    f"levantar pesas / límite superior de la \n\n\n       " \
-    #                    f"musculatura obtenida sin uso de agentes \n\n\n       " \
-    #                    f"fármaco-lógicos, por loque el MLG podría  \n\n\n       " \
-    #                    f"llegar a 40"
-    #         else:
-    #             print("error final2bonus1")
-    #             return "error mlg"
-    #     elif sexo == "mujer":
-    #         mlgm = [13, 15, 17, 22]
-    #         dato2 = min(mlgm, key=lambda x: abs(x - fmlg))
-    #         if dato2 == 13:
-    #             print("Complexión ligera con poca musculatura")
-    #             return "con complexion ligera con poca musculatura"
-    #         if dato2 == 15:
-    #             print("Musculatura promedio")
-    #             return "con musculatura promedio"
-    #         if dato2 == 17:
-    #             print("Marcadamente musculoso ")
-    #             return "marcadamente musculosa"
-    #         if dato2 == 22:
-    #             print(
-    #                 "No se logra normalmente sin levantar pesas / Límite superior de la musculatura obtenida sin uso "
-    #                 "de agentes fármaco-lógicos, por lo que el MLG podría llegar a 40")
-    #             return "con medidas que no se logran normalmente \n\n\n      " \
-    #                    "sin levantar pesas / límite superior de \n\n\n      " \
-    #                    "la musculatura obtenida sin uso de \n\n\n      " \
-    #                    "agentes fármaco-lógicos, por lo que el \n\n\n      " \
-    #                    "MLG podría llegar a 40"
-    #         else:
-    #             print("error final2bonus1")
-    #
-    # def iamb_medic(iamb):
-    #     fiamb = float(iamb)
-    #     if fiamb < 5:
-    #         print("Bajo nivel de musculatura o disminución")
-    #         return "un bajo nivel de musculatura o disminucion"
-    #     elif fiamb in range(5, 15):
-    #         print("Masa muscular debajo del promedio")
-    #         return "una masa muscular debajo del promedio"
-    #     elif fiamb in range(16, 85):
-    #         print("Masa muscular promedio")
-    #         return "una masa muscular promedio"
-    #     elif fiamb in range(86, 95):
-    #         print("Masa muscular arriba del promedio o hipertrofia muscular")
-    #         return "una masa muscular arriba del promedio o \n\n\n      " \
-    #                "hièrtrofia muscular"
-    #     elif fiamb > 95:
-    #         print("Masa muscular alta - hipertrofia muscular")
-    #         return "una masa muscular alta - hipertrofia \n\n\n      " \
-    #                "muscular"
-    #     else:
-    #         print("error iamb")
-    #         return "error iamb"
-    #
-    # def complexion_medic(complexion, sexo):
-    #     fcomplexion = float(complexion)
-    #     if sexo == "hombre":
-    #         if fcomplexion > 10.4:
-    #             print("complexion pequeña")
-    #             return "complexion pequeña"
-    #         elif 9.6 < fcomplexion < 10.3:
-    #             print("complexion mediana")
-    #             return "complexion mediana"
-    #         elif fcomplexion < 9.5:
-    #             print("complexion grande")
-    #             return "complexion grande"
-    #     elif sexo == "mujer":
-    #         if fcomplexion > 10.9:
-    #             print("complexion pequeña")
-    #             return "complexion pequeña"
-    #         elif 9.9 < fcomplexion < 10.8:
-    #             print("complexion mediana")
-    #             return "complexion mediana"
-    #         elif fcomplexion < 9.8:
-    #             print("complexion grande")
-    #             return "complexion grande"
-    #
-    # def peso_ideal_medic(peso, peso_ideal):
-    #     fpeso = float(peso)
-    #     fpeso_ideal = float(peso_ideal)
-    #     print(fpeso_ideal)
-    #     ## abajo esta % de peso ideal, falta este dato de salida
-    #     dato3 = int((fpeso * 100) / fpeso_ideal)
-    #     print(dato3)
-    #     if dato3 < 60:
-    #         print("Malnutrición severa")
-    #         return "malnutricion severa"
-    #     elif 60 <= dato3 <= 89:
-    #         print("Malnutrición moderada")
-    #         return "malnutricion moderada"
-    #     elif 90 <= dato3 <= 109:
-    #         print("Normalidad")
-    #         return "nutricion promedio"
-    #     elif 110 <= dato3 <= 120:
-    #         print("Sobrepeso")
-    #         return "sobrepeso"
-    #     elif dato3 > 120:
-    #         print("Obesidad")
-    #     else:
-    #         print("error")
-    #
-    # imc_info = imc_medic(imc)
-    # icc_info = icc_medic(icc, sexo)
-    # icc_text = icc_texto(icc_info)
-    # mlg_info = mlg_medic(mlg, sexo)
-    # iamb_info = iamb_medic(iamb)
-    # complexion_info = complexion_medic(complexion, sexo)
-    # peso_ideal_info = peso_ideal_medic(peso, peso_ideal)
-    #
-    #
-    pdf.multi_cell(0, 20, f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n       "
-                          f"con un indice de masa corporal de "
-                          f"{imc} usted califica que \n\n\n       posee {imc_info}\n\n\n\n\n\n       "
-                          f"con un indice cintura cadera de {icc} usted califica como \n\n\n       "
-                          f"{icc_info} y {icc_text}\n\n\n\n\n\n       "
-                          f"con un indice de masa libre de grasa de {mlg} usted esta \n\n\n       "
-                          f"{mlg_info}\n\n\n\n\n\n       "
-                          f"con un indice del area muscular del brazo de {iamb} \n\n\n       "
-                          f"en persentiles se puede afirmar que usted posee \n\n\n       "
-                          f"{iamb_info}\n\n\n\n\n\n       "
-                          f"con un indice de complexion de {complexion} usted posee una \n\n\n       "
-                          f"{complexion_info}\n\n\n\n\n\n       "
-                          f"con un porcentaje de peso ideal del {peso_ideal} usted posee \n\n\n       "
-                          f"{peso_ideal_info}")
 
     pdf.output("new.pdf", "F")
 
