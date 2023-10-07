@@ -268,19 +268,20 @@ def create_pdf(filename):
     complexion_info = complexion_medic(complexion, sexo)
     peso_ideal_info = peso_ideal_medic(peso, peso_ideal)
 
-    ix = 800
-    iy = 1300
-
-    pdf.image("basura/big_good.png", ix, iy)
-
-    x = 3*25
-    y = (-2*25) * -1
-    imgx = x + (ix + 300 - 12.5)
-    imgy = y + (iy + 300 - 12.5)
-
-    pdf.image("basura/dot.png", ix+300, iy+300)
-    pdf.image("basura/dot.png", imgx, imgy)
-        
+    pdf.multi_cell(0, 20, f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n       "
+                          f"con un indice de masa corporal de "
+                          f"{imc} usted califica que \n\n\n       posee {imc_info}\n\n\n\n\n\n       "
+                          f"con un indice cintura cadera de {icc} usted califica como \n\n\n       "
+                          f"{icc_info} y {icc_text}\n\n\n\n\n\n       "
+                          f"con un indice de masa libre de grasa de {mlg} usted esta \n\n\n       "
+                          f"{mlg_info}\n\n\n\n\n\n       "
+                          f"con un indice del area muscular del brazo de {iamb} \n\n\n       "
+                          f"en persentiles se puede afirmar que usted posee \n\n\n       "
+                          f"{iamb_info}\n\n\n\n\n\n       "
+                          f"con un indice de complexion de {complexion} usted posee una \n\n\n       "
+                          f"{complexion_info}\n\n\n\n\n\n       "
+                          f"con un porcentaje de peso ideal del {peso_ideal} usted posee \n\n\n       "
+                          f"{peso_ideal_info}")
 
     pdf.output("new.pdf", "F")
 
