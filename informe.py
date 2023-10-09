@@ -269,19 +269,19 @@ def create_pdf(filename):
     peso_ideal_info = peso_ideal_medic(peso, peso_ideal)
 
     pdf.multi_cell(0, 20, f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n       "
-                          f"con un indice de masa corporal de "
-                          f"{imc} usted califica que \n\n\n       posee {imc_info}\n\n\n\n\n\n       "
-                          f"con un indice cintura cadera de {icc} usted califica como \n\n\n       "
-                          f"{icc_info} y {icc_text}\n\n\n\n\n\n       "
-                          f"con un indice de masa libre de grasa de {mlg} usted esta \n\n\n       "
-                          f"{mlg_info}\n\n\n\n\n\n       "
-                          f"con un indice del area muscular del brazo de {iamb} \n\n\n       "
-                          f"en persentiles se puede afirmar que usted posee \n\n\n       "
-                          f"{iamb_info}\n\n\n\n\n\n       "
-                          f"con un indice de complexion de {complexion} usted posee una \n\n\n       "
-                          f"{complexion_info}\n\n\n\n\n\n       "
-                          f"con un porcentaje de peso ideal del {peso_ideal} usted posee \n\n\n       "
-                          f"{peso_ideal_info}")
+                          f"Con un Indice de Masa Corporal de "
+                          f"{imc} usted califica que \n\n\n       posee {imc_info}.\n\n\n\n\n\n       "
+                          f"Con un Indice Cintura Cadera de {icc} usted califica como \n\n\n       "
+                          f"{icc_info} y {icc_text}.\n\n\n\n\n\n       "
+                          f"Con un Indice de Masa Libre de Grasa de {mlg} usted esta \n\n\n       "
+                          f"{mlg_info}.\n\n\n\n\n\n       "
+                          f"Con un Indice del Area Muscular del brazo de {iamb} \n\n\n       "
+                          f"en Persentiles se puede afirmar que usted posee \n\n\n       "
+                          f"{iamb_info}.\n\n\n\n\n\n       "
+                          f"Con un Indice de Complexion de {complexion} usted posee una \n\n\n       "
+                          f"{complexion_info}.\n\n\n\n\n\n       "
+                          f"Con un Porcentaje de Peso Ideal del {peso_ideal}% usted posee \n\n\n       "
+                          f"{peso_ideal_info}.")
 
     pdf.output("new.pdf", "F")
 

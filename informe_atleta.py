@@ -298,7 +298,7 @@ def create_pdf_atleta(filename):
 
     pdf.image("basura/big_good.png", ix, iy)
 
-    ##el 3 y el -2 son valores que coloqu de ejemplo y deben remplazarse por los valores que da logica de atleta para
+    ##el 3 y el -2 son valores que coloque de ejemplo y deben remplazarse por los valores que da logica de atleta para
     ##saber el posicionamiento en la grafica del somatotipo
     valorx = 3
     valory = -2
