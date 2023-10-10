@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="grafica">
+    <file>RM78s.png</file>
+  </qresource>
+</RCC>
