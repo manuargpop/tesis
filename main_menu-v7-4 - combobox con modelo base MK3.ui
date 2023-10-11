@@ -6809,7 +6809,7 @@ border-radius: 5px;
                 <property name="geometry">
                  <rect>
                   <x>0</x>
-                  <y>-414</y>
+                  <y>-207</y>
                   <width>1209</width>
                   <height>1098</height>
                  </rect>
@@ -7987,49 +7987,7 @@ border: 2px solid rgb(0, 0, 61);</string>
                           <enum>QFrame::Raised</enum>
                          </property>
                          <layout class="QGridLayout" name="gridLayout_2">
-                          <item row="3" column="1">
-                           <widget class="QComboBox" name="comboBox_3">
-                            <property name="minimumSize">
-                             <size>
-                              <width>0</width>
-                              <height>30</height>
-                             </size>
-                            </property>
-                            <property name="maximumSize">
-                             <size>
-                              <width>500</width>
-                              <height>35</height>
-                             </size>
-                            </property>
-                            <property name="styleSheet">
-                             <string notr="true">border: 2px solid rgb(0, 0, 61);
-border-radius: 3px;
-border-color: rgb(0, 0, 0);
-background-color: rgb(255, 255, 255);
-</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="2" column="0">
-                           <widget class="QFrame" name="frame_28">
-                            <property name="maximumSize">
-                             <size>
-                              <width>30</width>
-                              <height>2000</height>
-                             </size>
-                            </property>
-                            <property name="styleSheet">
-                             <string notr="true">border: none</string>
-                            </property>
-                            <property name="frameShape">
-                             <enum>QFrame::StyledPanel</enum>
-                            </property>
-                            <property name="frameShadow">
-                             <enum>QFrame::Raised</enum>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="0" column="2">
+                          <item row="1" column="2">
                            <widget class="QLabel" name="label_10">
                             <property name="minimumSize">
                              <size>
@@ -8063,7 +8021,161 @@ color: white</string>
                             </property>
                            </widget>
                           </item>
-                          <item row="1" column="2">
+                          <item row="3" column="0">
+                           <widget class="QFrame" name="frame_28">
+                            <property name="maximumSize">
+                             <size>
+                              <width>30</width>
+                              <height>2000</height>
+                             </size>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">border: none</string>
+                            </property>
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="3" column="1">
+                           <widget class="QLabel" name="lbl_est_citas">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>50</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>4000</height>
+                             </size>
+                            </property>
+                            <property name="font">
+                             <font>
+                              <family>Circular Std</family>
+                              <pointsize>19</pointsize>
+                             </font>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">border: 2px solid rgb(0, 0, 61);
+border-radius: 10px;
+background-color: rgb(0, 0, 61);
+color: white</string>
+                            </property>
+                            <property name="text">
+                             <string>Cita 1</string>
+                            </property>
+                            <property name="alignment">
+                             <set>Qt::AlignCenter</set>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="5" column="3">
+                           <widget class="QFrame" name="frame_20">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>25</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>100</height>
+                             </size>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">border: None</string>
+                            </property>
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="4" column="1">
+                           <widget class="QComboBox" name="comboBox_3">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>30</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>500</width>
+                              <height>35</height>
+                             </size>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">border: 2px solid rgb(0, 0, 61);
+border-radius: 3px;
+border-color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
+</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="3" column="5">
+                           <widget class="QFrame" name="frame_29">
+                            <property name="maximumSize">
+                             <size>
+                              <width>30</width>
+                              <height>16777215</height>
+                             </size>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">border: none</string>
+                            </property>
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="3" column="2">
+                           <widget class="QLabel" name="label_9">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>50</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>50</height>
+                             </size>
+                            </property>
+                            <property name="font">
+                             <font>
+                              <family>Circular Std</family>
+                              <pointsize>19</pointsize>
+                             </font>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">border: 2px solid rgb(0, 0, 61);
+border-radius: 10px;
+background-color: rgb(0, 0, 61);
+color: white</string>
+                            </property>
+                            <property name="text">
+                             <string>Cita 2</string>
+                            </property>
+                            <property name="alignment">
+                             <set>Qt::AlignCenter</set>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="2" column="2">
                            <widget class="QComboBox" name="comboBox_2">
                             <property name="minimumSize">
                              <size>
@@ -8107,85 +8219,7 @@ background-color: rgb(255, 255, 255);
                             </item>
                            </widget>
                           </item>
-                          <item row="2" column="1">
-                           <widget class="QLabel" name="lbl_est_citas">
-                            <property name="minimumSize">
-                             <size>
-                              <width>0</width>
-                              <height>50</height>
-                             </size>
-                            </property>
-                            <property name="maximumSize">
-                             <size>
-                              <width>16777215</width>
-                              <height>4000</height>
-                             </size>
-                            </property>
-                            <property name="font">
-                             <font>
-                              <family>Circular Std</family>
-                              <pointsize>19</pointsize>
-                             </font>
-                            </property>
-                            <property name="styleSheet">
-                             <string notr="true">border: 2px solid rgb(0, 0, 61);
-border-radius: 10px;
-background-color: rgb(0, 0, 61);
-color: white</string>
-                            </property>
-                            <property name="text">
-                             <string>Cita 1</string>
-                            </property>
-                            <property name="alignment">
-                             <set>Qt::AlignCenter</set>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="2" column="2">
-                           <widget class="QFrame" name="frame_23">
-                            <property name="minimumSize">
-                             <size>
-                              <width>0</width>
-                              <height>50</height>
-                             </size>
-                            </property>
-                            <property name="styleSheet">
-                             <string notr="true">border: None</string>
-                            </property>
-                            <property name="frameShape">
-                             <enum>QFrame::StyledPanel</enum>
-                            </property>
-                            <property name="frameShadow">
-                             <enum>QFrame::Raised</enum>
-                            </property>
-                           </widget>
-                          </item>
                           <item row="4" column="2">
-                           <widget class="QFrame" name="frame_20">
-                            <property name="minimumSize">
-                             <size>
-                              <width>0</width>
-                              <height>25</height>
-                             </size>
-                            </property>
-                            <property name="maximumSize">
-                             <size>
-                              <width>16777215</width>
-                              <height>100</height>
-                             </size>
-                            </property>
-                            <property name="styleSheet">
-                             <string notr="true">border: None</string>
-                            </property>
-                            <property name="frameShape">
-                             <enum>QFrame::StyledPanel</enum>
-                            </property>
-                            <property name="frameShadow">
-                             <enum>QFrame::Raised</enum>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="3" column="3">
                            <widget class="QComboBox" name="comboBox">
                             <property name="minimumSize">
                              <size>
@@ -8208,20 +8242,8 @@ background-color: rgb(255, 255, 255);
                             </property>
                            </widget>
                           </item>
-                          <item row="2" column="3">
-                           <widget class="QLabel" name="label_9">
-                            <property name="minimumSize">
-                             <size>
-                              <width>0</width>
-                              <height>50</height>
-                             </size>
-                            </property>
-                            <property name="maximumSize">
-                             <size>
-                              <width>16777215</width>
-                              <height>50</height>
-                             </size>
-                            </property>
+                          <item row="3" column="3">
+                           <widget class="QLabel" name="label_16">
                             <property name="font">
                              <font>
                               <family>Circular Std</family>
@@ -8235,54 +8257,27 @@ background-color: rgb(0, 0, 61);
 color: white</string>
                             </property>
                             <property name="text">
-                             <string>Cita 2</string>
+                             <string>Dato</string>
                             </property>
                             <property name="alignment">
                              <set>Qt::AlignCenter</set>
                             </property>
                            </widget>
                           </item>
-                          <item row="3" column="2">
-                           <widget class="QFrame" name="frame_10">
+                          <item row="4" column="3">
+                           <widget class="QComboBox" name="comboBox_4">
                             <property name="minimumSize">
                              <size>
                               <width>0</width>
-                              <height>35</height>
-                             </size>
-                            </property>
-                            <property name="maximumSize">
-                             <size>
-                              <width>300</width>
-                              <height>16777215</height>
+                              <height>30</height>
                              </size>
                             </property>
                             <property name="styleSheet">
-                             <string notr="true">border: None</string>
-                            </property>
-                            <property name="frameShape">
-                             <enum>QFrame::StyledPanel</enum>
-                            </property>
-                            <property name="frameShadow">
-                             <enum>QFrame::Raised</enum>
-                            </property>
-                           </widget>
-                          </item>
-                          <item row="2" column="4">
-                           <widget class="QFrame" name="frame_29">
-                            <property name="maximumSize">
-                             <size>
-                              <width>30</width>
-                              <height>16777215</height>
-                             </size>
-                            </property>
-                            <property name="styleSheet">
-                             <string notr="true">border: none</string>
-                            </property>
-                            <property name="frameShape">
-                             <enum>QFrame::StyledPanel</enum>
-                            </property>
-                            <property name="frameShadow">
-                             <enum>QFrame::Raised</enum>
+                             <string notr="true">border: 2px solid rgb(0, 0, 61);
+border-radius: 3px;
+border-color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
+</string>
                             </property>
                            </widget>
                           </item>
