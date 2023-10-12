@@ -283,7 +283,10 @@ def create_pdf(filename):
                           f"Con un Porcentaje de Peso Ideal del {peso_ideal}% usted posee \n\n\n       "
                           f"{peso_ideal_info}.")
 
-    pdf.output("new.pdf", "F")
+    dia = datetime.datetime.now().strftime("%Y_%m_%d_%H_%M_%S_")
+    docname = dia + "reporte.pdf"
+
+    pdf.output(docname, "F")
 
 if __name__ == "__main__":
     create_pdf("new.pdf")

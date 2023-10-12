@@ -6809,7 +6809,7 @@ border-radius: 5px;
                 <property name="geometry">
                  <rect>
                   <x>0</x>
-                  <y>-207</y>
+                  <y>-120</y>
                   <width>1209</width>
                   <height>1098</height>
                  </rect>
@@ -7503,8 +7503,25 @@ padding: 10px;</string>
                                <property name="frameShadow">
                                 <enum>QFrame::Raised</enum>
                                </property>
-                               <layout class="QVBoxLayout" name="verticalLayout_51">
-                                <item>
+                               <layout class="QGridLayout" name="gridLayout_6">
+                                <item row="1" column="0">
+                                 <widget class="QLabel" name="lbl_patient_adulto">
+                                  <property name="font">
+                                   <font>
+                                    <family>Circular Std</family>
+                                   </font>
+                                  </property>
+                                  <property name="styleSheet">
+                                   <string notr="true">border: none;
+border-radius: none;
+color: rgb(100, 100, 100);</string>
+                                  </property>
+                                  <property name="text">
+                                   <string>      Adulto:</string>
+                                  </property>
+                                 </widget>
+                                </item>
+                                <item row="0" column="0">
                                  <widget class="QLabel" name="label_8">
                                   <property name="minimumSize">
                                    <size>
@@ -7535,24 +7552,7 @@ color: rgb(100, 100, 100);</string>
                                   </property>
                                  </widget>
                                 </item>
-                                <item>
-                                 <widget class="QLabel" name="lbl_patient_adulto">
-                                  <property name="font">
-                                   <font>
-                                    <family>Circular Std</family>
-                                   </font>
-                                  </property>
-                                  <property name="styleSheet">
-                                   <string notr="true">border: none;
-border-radius: none;
-color: rgb(100, 100, 100);</string>
-                                  </property>
-                                  <property name="text">
-                                   <string>      Adulto:</string>
-                                  </property>
-                                 </widget>
-                                </item>
-                                <item>
+                                <item row="2" column="0">
                                  <widget class="QLabel" name="lbl_patient_atleta">
                                   <property name="font">
                                    <font>
@@ -7569,20 +7569,29 @@ color: rgb(100, 100, 100);</string>
                                   </property>
                                  </widget>
                                 </item>
-                                <item>
-                                 <widget class="QLabel" name="lbl_patient_joven">
-                                  <property name="font">
-                                   <font>
-                                    <family>Circular Std</family>
-                                   </font>
-                                  </property>
-                                  <property name="styleSheet">
-                                   <string notr="true">border: none;
-border-radius: none;
-color: rgb(100, 100, 100);</string>
+                                <item row="1" column="1">
+                                 <widget class="QLabel" name="lbl_patient_adulto_count">
+                                  <property name="minimumSize">
+                                   <size>
+                                    <width>50</width>
+                                    <height>0</height>
+                                   </size>
                                   </property>
                                   <property name="text">
-                                   <string>      Joven:</string>
+                                   <string>0</string>
+                                  </property>
+                                 </widget>
+                                </item>
+                                <item row="2" column="1">
+                                 <widget class="QLabel" name="lbl_patient_atleta_count">
+                                  <property name="minimumSize">
+                                   <size>
+                                    <width>50</width>
+                                    <height>0</height>
+                                   </size>
+                                  </property>
+                                  <property name="text">
+                                   <string>0</string>
                                   </property>
                                  </widget>
                                 </item>
@@ -8176,7 +8185,7 @@ color: white</string>
                            </widget>
                           </item>
                           <item row="2" column="2">
-                           <widget class="QComboBox" name="comboBox_2">
+                           <widget class="QComboBox" name="comboBox__paciente1">
                             <property name="minimumSize">
                              <size>
                               <width>0</width>
