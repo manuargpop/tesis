@@ -21,6 +21,7 @@ def inicio():
         edad = float(relativedelta(fecha_nacimiento, fecha_ultima_cita))
         return edad
 
+    ##funcion para llenar la lista de cita 1 y 2
     def cambio_paciente(contenido):
         for position, datos in enumerate(data):
             if str(datos.__dict__.get('t_pac')) == "Adulto":
@@ -32,7 +33,7 @@ def inicio():
 
     data = []
     ##el contador contiene = pacientes adultos, pacientes atletas, pacientes totales, hombres, mujeres
-    contadores = [0, 0, 0, 0, 0]
+    contadores = [0, 0, 0, 0, 0, 0]
     edad_total = 0
     edad_prom = 0
     ##esto lee los pacientes del txt y los saca
@@ -72,14 +73,25 @@ def inicio():
     # self.lbl_cant_hombres.setText(contadores[3])
     # self.lbl_cant_mujeres.setText(contadores[4])
 
-    ##falta citas totales, se requiere un txt con minimo: 1 paciente con 1 cita y 1 paciente con 2 citas
+    ##calcula la cantidad total de citas y la escribe en su label
+
+    for position, datos in enumerate(data):
+        if str(datos.__dict__.get('t_pac')) == "Adulto":
+            contadores[5] += (len(datos.get_medidas()))
+        elif str(datos.__dict__.get('t_pac')) == "Atleta":
+            contadores[5] += (len(datos.get_medidas()))
+        else:
+            print("error")
+    #self.lbl_cita_total.setText(contadores[4])
+
+    ##esto llena la combobox de paciente con los pacientes
 
     # for position, datos in enumerate(data):
-    #     ##combobox_paciente1.addItem(str(datos.__dict__.get('name')), str(datos.__dict__.get('doc')))
-    #
+    #     ##combobox_paciente1.addItem(str(datos.__dict__.get('t_pac')), str(datos.__dict__.get('name')), str(datos.__dict__.get('doc')))
+
+    ##al seleccionar un paciente empieza a cargar las citas de este
     # contenido = combobox_paciente1.currentText()
-    # ##a este le hace falta un self.
-    # combobox_paciente1.currentTextChanged.connect(cambio_paciente(contenido))
+    # combobox_paciente1.currentTextChanged.connect(self.cambio_paciente(contenido))
 
 
 class Patient:

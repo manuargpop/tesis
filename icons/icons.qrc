@@ -1,0 +1,19 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>icon_lista.png</file>
+    <file>3d.png</file>
+    <file>add_patient.png</file>
+    <file>analytics.png</file>
+    <file>credit.png</file>
+    <file>db.png</file>
+    <file>delete.png</file>
+    <file>export.png</file>
+    <file>import.png</file>
+    <file>informe.png</file>
+    <file>left.png</file>
+    <file>menu-lockw.png</file>
+    <file>menu-openw.png</file>
+    <file>patient.png</file>
+    <file>verinfo.png</file>
+  </qresource>
+</RCC>

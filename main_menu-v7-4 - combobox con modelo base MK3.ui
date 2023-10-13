@@ -6809,7 +6809,7 @@ border-radius: 5px;
                 <property name="geometry">
                  <rect>
                   <x>0</x>
-                  <y>-120</y>
+                  <y>0</y>
                   <width>1209</width>
                   <height>1098</height>
                  </rect>
@@ -7016,7 +7016,7 @@ color: rgb(100, 100, 100);</string>
                                 <string notr="true">border: none;</string>
                                </property>
                                <property name="text">
-                                <string>88</string>
+                                <string>0</string>
                                </property>
                                <property name="alignment">
                                 <set>Qt::AlignCenter</set>
@@ -7194,7 +7194,7 @@ color: rgb(100, 100, 100);</string>
                                 <string notr="true">border: none;</string>
                                </property>
                                <property name="text">
-                                <string>37.5</string>
+                                <string>0</string>
                                </property>
                                <property name="alignment">
                                 <set>Qt::AlignCenter</set>
@@ -7372,7 +7372,7 @@ color: rgb(100, 100, 100);</string>
                                 <string notr="true">border: none;</string>
                                </property>
                                <property name="text">
-                                <string>12</string>
+                                <string>0</string>
                                </property>
                                <property name="alignment">
                                 <set>Qt::AlignCenter</set>
@@ -7634,7 +7634,7 @@ color: rgb(100, 100, 100);</string>
                                    <string notr="true">border: none;</string>
                                   </property>
                                   <property name="text">
-                                   <string>100</string>
+                                   <string>0</string>
                                   </property>
                                   <property name="alignment">
                                    <set>Qt::AlignCenter</set>
@@ -7812,7 +7812,7 @@ color: rgb(100, 100, 100);</string>
                                    <string notr="true">border: none;</string>
                                   </property>
                                   <property name="text">
-                                   <string>300</string>
+                                   <string>0</string>
                                   </property>
                                   <property name="alignment">
                                    <set>Qt::AlignCenter</set>
