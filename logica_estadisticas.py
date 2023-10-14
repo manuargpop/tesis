@@ -22,14 +22,28 @@ def inicio():
         return edad
 
     ##funcion para llenar la lista de cita 1 y 2
-    def cambio_paciente(contenido):
-        for position, datos in enumerate(data):
-            if str(datos.__dict__.get('t_pac')) == "Adulto":
-                contadores[0] += 1
-                contadores[2] += 1
-            elif str(datos.__dict__.get('t_pac')) == "Atleta":
-                contadores[1] += 1
-                contadores[2] += 1
+    def cambio_paciente(contenido, max):
+        contador_p = 0
+        contador_c = 0
+        while contador_p < max:
+            if contenido == all_data[contador_p][3]:
+                print("good paciente")
+                while contador_c < len(all_data[contador_p][1]):
+                    if contador_c != 0:
+                        # combobox_cita1.addItem(str(all_data[contador_p][4]))
+                        # combobox_cita2.addItem(str(all_data[contador_p][4]))
+                        print(str(contador_c)+" "+str(all_data[contador_p][1][contador_c][13])+" "+str(all_data[contador_p][1][contador_c][14]))
+                        contador_c += 1
+                    else:
+                        # combobox_cita1.addItem(str(all_data[contador_p][4]))
+                        # combobox_cita2.addItem(str(all_data[contador_p][4]))
+                        print(str(contador_c)+" "+str(all_data[contador_p][4])+" "+str(all_data[contador_p][5]))
+                        contador_c += 1
+                else:
+                    contador_p += 1
+            else:
+                contador_p += 1
+                print("no es el paciente")
 
     data = []
     ##el contador contiene = pacientes adultos, pacientes atletas, pacientes totales, hombres, mujeres
@@ -44,6 +58,35 @@ def inicio():
                 data.append(info)
             except EOFError:
                 break
+    row_data = []
+    all_data = []
+    med = []
+    contador = 0
+    for position, datos in enumerate(data):
+        str(datos.__dict__.get('name'))
+        str(datos.__dict__.get('medidas'))
+        str(datos.__dict__.get('t_pac'))
+        str(datos.__dict__.get('fecha'))
+        str(datos.__dict__.get('doc'))
+
+        row_data = [datos.__dict__.get('name'), datos.__dict__.get('medidas'), datos.__dict__.get('t_pac'),
+                    datos.__dict__.get('doc'), datos.__dict__.get('fecha'), datos.__dict__.get('hora')]
+        all_data.append(row_data)
+        contador += 1
+
+    # primero paciente (de momento hay 2, primo jose y segundo joestar)
+    # segundo es dato del row_data (0 nombre completo, 1 todas las medidas de entrada, 2 tipo de paciente,
+    # 3 documento, 4 fecha de cita)
+    # tercero depende del anterior:
+    # si es 0 es una letra del nombre completo,
+    # si es 1 son todos los datos de una cita,
+    # si es 2 son las letras de tipo de paciente
+    # el cuarto dato es solo para medidas de citas, te da una medida e particular de la cita seleccionada anteriormente
+    # nota: no tienes que usar los 4, solo usa los nesezarios
+    # print(all_data[0][1][0][1])
+    # por ejemplo arriba llamame a primo josue, dame todas sus medidas, solo las de la cita 1, solo su peso
+    print(all_data[0][1][2][13])
+
     ##esto llama a los pacientes y los cuenta el total ademas de contar por tipos de paciente y los asigna en sus label
     for position, datos in enumerate(data):
         if str(datos.__dict__.get('t_pac')) == "Adulto":
@@ -59,6 +102,7 @@ def inicio():
     # self.lbl_patient_total.setText(contadores[2])
 
     ##esto calcula la edad promedio de los pacientes (no esta listo) y lo asigna en su label
+
     # for position, datos in enumerate(data):
     #     edad_total += getedad(str(datos.__dict__.get('fnacimiento')), str(datos.__dict__.get('fecha')))
     # edad_prom = edad_total / contadores[2]
@@ -77,9 +121,9 @@ def inicio():
 
     for position, datos in enumerate(data):
         if str(datos.__dict__.get('t_pac')) == "Adulto":
-            contadores[5] += (len(datos.get_medidas()))
+            contadores[5] += len(datos.get_medidas())
         elif str(datos.__dict__.get('t_pac')) == "Atleta":
-            contadores[5] += (len(datos.get_medidas()))
+            contadores[5] += len(datos.get_medidas())
         else:
             print("error")
     #self.lbl_cita_total.setText(contadores[4])
@@ -87,11 +131,14 @@ def inicio():
     ##esto llena la combobox de paciente con los pacientes
 
     # for position, datos in enumerate(data):
-    #     ##combobox_paciente1.addItem(str(datos.__dict__.get('t_pac')), str(datos.__dict__.get('name')), str(datos.__dict__.get('doc')))
-
+    #     ##combobox_paciente1.addItem(str(datos.__dict__.get('name')), str(datos.__dict__.get('doc')))
+    print(str(datos.__dict__.get('name')), str(datos.__dict__.get('doc')))
     ##al seleccionar un paciente empieza a cargar las citas de este
-    # contenido = combobox_paciente1.currentText()
+    # contenido_raw = combobox_paciente1.currentText()
+    # contenido_split = contenido_raw.split
+    # contenido = contenido_split[2]
     # combobox_paciente1.currentTextChanged.connect(self.cambio_paciente(contenido))
+    cambio_paciente("CI-12123123",contadores[2])
 
 
 class Patient:
