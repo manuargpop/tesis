@@ -265,19 +265,19 @@ def create_pdf_atleta(filename):
 
     def longitud_relativa_medic(lonitud_relativa):
         if longitud_relativa <= 44.9:
-            return "Braquibraquial (extremidad superior corta)"
+            return "Braquibraquial \n\n\n\n\n\n\n\n       (extremidad superior corta)"
         elif 45 < indice_cormico < 46.9:
-            return "Mesobraquial (extremidad superior intermedia)"
+            return "Mesobraquial \n\n\n\n\n\n\n\n       (extremidad superior intermedia)"
         elif indice_cormico >= 47:
-            return "Macrobraquial (extremidad superior larga)"
+            return "Macrobraquial \n\n\n\n\n\n\n\n       (extremidad superior larga)"
 
     def indice_esqueletico_medic(indice_esqueletico):
         if indice_esqueletico <= 84.9:
-            return "Braquiesquélico (extremidad inferior corta)"
+            return "Braquiesquélico \n\n\n\n\n\n\n\n       (extremidad inferior corta)"
         elif 85 < indice_esqueletico < 89.9:
-            return "Mesoesquélico (extremidad inferior mediana)"
+            return "Mesoesquélico \n\n\n\n\n\n\n\n       (extremidad inferior mediana)"
         elif indice_esqueletico >= 90:
-            return "Macroesquélico (extremidad inferior larga)"
+            return "Macroesquélico \n\n\n\n\n\n\n\n       (extremidad inferior larga)"
 
     imc_info = imc_medic(imc)
     mlg_info = mlg_medic(mlg, sexo)
@@ -291,24 +291,23 @@ def create_pdf_atleta(filename):
     valory = -2
 
     pdf.multi_cell(0, 10, f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-                          f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n       "
-                          f"Con un índice de masa corporal de "
-                          f"{imc} usted califica que posee \n\n\n\n\n\n\n\n       {imc_info}"
-                          f"\n\n\n\n\n\n\n\n\n\n\n       "
-                          f"Con un índice de masa libre de grasa de {mlg} usted esta \n\n\n\n\n\n\n\n       "
-                          f"{mlg_info}\n\n\n\n\n\n\n\n\n\n\n       "
-                          f"Con un índice del área muscular del brazo de {iamb}"
-                          f"en percentiles se puede afirmar que usted \n\n\n\n\n\n\n\n        posee"
-                          f"{iamb_info}\n\n\n\n\n\n\n\n\n\n\n       "
-                          f"Con un índice de complexión de {complexion} usted posee una "
-                          f"{complexion_info}\n\n\n\n\n\n\n\n\n\n\n       "
-                          f"Con un índice cormico de {indice_cormico} usted califica como"
-                          f"{cormico_info}\n\n\n\n\n\n\n\n\n\n\n       "
+                          f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n       "
+                          f"Con un Indicé de masa corporal de "
+                          f"{imc} usted califica que posee \n\n\n\n\n\n\n\n       {imc_info}."
+                          f"\n\n\n\n\n\n\n\n\n\n\n\n\n       "
+                          f"Con un Indicé de masa libre de grasa de {mlg} usted esta \n\n\n\n\n\n\n\n       "
+                          f"{mlg_info}.\n\n\n\n\n\n\n\n\n\n\n\n\n       "
+                          f"Con un Indicé del área muscular del brazo de {iamb} "
+                          f"en percentiles se puede \n\n\n\n\n\n\n\n       afirmar que usted posee "
+                          f"{iamb_info}.\n\n\n\n\n\n\n\n\n\n\n\n\n       "
+                          f"Con un Indicé de complexión de {complexion} usted posee una "
+                          f"{complexion_info}.\n\n\n\n\n\n\n\n\n\n\n\n\n       "
+                          f"Con un Indicé cormico de {indice_cormico} usted califica como"
+                          f"{cormico_info}.\n\n\n\n\n\n\n\n\n\n\n\n\n       "
                           f"Con una longitud relativa de {longitud_relativa} usted califica como "
-                          f"{long_info}\n\n\n\n\n\n\n\n\n\n\n       "
-                          f"Con un índice esquelético de {indice_esqueletico} usted califica como "
-                          f"{icor_info}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-                          f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                          f"{long_info}.\n\n\n\n\n\n\n\n\n\n\n\n\n       "
+                          f"Con un Indicé esquelético de {indice_esqueletico} usted califica como "
+                          f"{icor_info}.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
                           f"                                                                           "
                           f"Valor en X: {valorx}\n\n\n\n\n\n\n\n\n\n\n"
                           f"                                                                           "
@@ -636,21 +635,21 @@ if __name__ == "__main__":
 #             elif indice_c >= 54.1:
 #                 return "Macrocórmico (Tronco largo)"
 #
-#     def longitud_relativa_medic(longitud_relativa):
+#     def longitud_relativa_medic(lonitud_relativa):
 #         if longitud_relativa <= 44.9:
-#             return "Braquibraquial (extremidad superior corta)"
+#             return "Braquibraquial \n\n\n\n\n\n\n\n       (extremidad superior corta)"
 #         elif 45 < indice_cormico < 46.9:
-#             return "Mesobraquial (extremidad superior intermedia)"
+#             return "Mesobraquial \n\n\n\n\n\n\n\n       (extremidad superior intermedia)"
 #         elif indice_cormico >= 47:
-#             return "Macrobraquial (extremidad superior larga)"
+#             return "Macrobraquial \n\n\n\n\n\n\n\n       (extremidad superior larga)"
 #
 #     def indice_esqueletico_medic(indice_esqueletico):
 #         if indice_esqueletico <= 84.9:
-#             return "Braquiesquélico (extremidad inferior corta)"
+#             return "Braquiesquélico \n\n\n\n\n\n\n\n       (extremidad inferior corta)"
 #         elif 85 < indice_esqueletico < 89.9:
-#             return "Mesoesquélico (extremidad inferior mediana)"
+#             return "Mesoesquélico \n\n\n\n\n\n\n\n       (extremidad inferior mediana)"
 #         elif indice_esqueletico >= 90:
-#             return "Macroesquélico (extremidad inferior larga)"
+#             return "Macroesquélico \n\n\n\n\n\n\n\n       (extremidad inferior larga)"
 #
 #     imc_info = imc_medic(imc)
 #     mlg_info = mlg_medic(mlg, sexo)
@@ -664,24 +663,23 @@ if __name__ == "__main__":
 #     valory = -2
 #
 #     pdf.multi_cell(0, 10, f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-#                           f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n       "
-#                           f"Con un índice de masa corporal de "
-#                           f"{imc} usted califica que posee \n\n\n\n\n\n\n\n       {imc_info}"
-#                           f"\n\n\n\n\n\n\n\n\n\n\n       "
-#                           f"Con un índice de masa libre de grasa de {mlg} usted esta \n\n\n\n\n\n\n\n       "
-#                           f"{mlg_info}\n\n\n\n\n\n\n\n\n\n\n       "
-#                           f"Con un índice del área muscular del brazo de {iamb}"
-#                           f"en percentiles se puede afirmar que usted \n\n\n\n\n\n\n\n        posee"
-#                           f"{iamb_info}\n\n\n\n\n\n\n\n\n\n\n       "
-#                           f"Con un índice de complexión de {complexion} usted posee una "
-#                           f"{complexion_info}\n\n\n\n\n\n\n\n\n\n\n       "
-#                           f"Con un índice cormico de {indice_cormico} usted califica como"
-#                           f"{cormico_info}\n\n\n\n\n\n\n\n\n\n\n       "
+#                           f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n       "
+#                           f"Con un Indicé de masa corporal de "
+#                           f"{imc} usted califica que posee \n\n\n\n\n\n\n\n       {imc_info}."
+#                           f"\n\n\n\n\n\n\n\n\n\n\n\n\n       "
+#                           f"Con un Indicé de masa libre de grasa de {mlg} usted esta \n\n\n\n\n\n\n\n       "
+#                           f"{mlg_info}.\n\n\n\n\n\n\n\n\n\n\n\n\n       "
+#                           f"Con un Indicé del área muscular del brazo de {iamb} "
+#                           f"en percentiles se puede \n\n\n\n\n\n\n\n       afirmar que usted posee "
+#                           f"{iamb_info}.\n\n\n\n\n\n\n\n\n\n\n\n\n       "
+#                           f"Con un Indicé de complexión de {complexion} usted posee una "
+#                           f"{complexion_info}.\n\n\n\n\n\n\n\n\n\n\n\n\n       "
+#                           f"Con un Indicé cormico de {indice_cormico} usted califica como"
+#                           f"{cormico_info}.\n\n\n\n\n\n\n\n\n\n\n\n\n       "
 #                           f"Con una longitud relativa de {longitud_relativa} usted califica como "
-#                           f"{long_info}\n\n\n\n\n\n\n\n\n\n\n       "
-#                           f"Con un índice esquelético de {indice_esqueletico} usted califica como "
-#                           f"{icor_info}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-#                           f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+#                           f"{long_info}.\n\n\n\n\n\n\n\n\n\n\n\n\n       "
+#                           f"Con un Indicé esquelético de {indice_esqueletico} usted califica como "
+#                           f"{icor_info}.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 #                           f"                                                                           "
 #                           f"Valor en X: {valorx}\n\n\n\n\n\n\n\n\n\n\n"
 #                           f"                                                                           "

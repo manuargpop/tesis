@@ -292,14 +292,14 @@ def create_pdf(filename):
                           f"Con un Indicé de Masa Corporal de "
                           f"{imc} usted califica que posee\n\n\n       {imc_info}.\n\n\n\n\n\n       "
                           f"Con un Indicé Cintura Cadera de {icc} usted califica como "
-                          f"{icc_info} y \n\n\n       {icc_text}.\n\n\n\n\n\n       "
+                          f"{icc_info} y \n\n\n       {icc_text}.\n\n\n\n\n\n\n       "
                           f"Con un Indicé de Masa Libre de Grasa de {mlg} usted esta \n\n\n       "
-                          f"{mlg_info}.\n\n\n\n\n\n       "
+                          f"{mlg_info}.\n\n\n\n\n\n\n       "
                           f"Con un Indicé del Área Muscular del brazo de {iamb} "
                           f"en Percentiles se puede afirmar \n\n\n       que usted posee "
-                          f"{iamb_info}.\n\n\n\n\n\n       "
+                          f"{iamb_info}.\n\n\n\n\n\n\n       "
                           f"Con un Indicé de Complexión de {complexion} usted posee una "
-                          f"{complexion_info}.\n\n\n\n\n\n       "
+                          f"{complexion_info}.\n\n\n\n\n\n\n       "
                           f"Con un Porcentaje de Peso Ideal del {peso_ideal}% usted posee "
                           f"{peso_ideal_info}.")
 

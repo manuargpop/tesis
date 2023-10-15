@@ -22,7 +22,41 @@ def inicio():
         return edad
 
     ##funcion para llenar la lista de cita 1 y 2
-    def cambio_paciente(contenido, max):
+    def cambio_paciente(contenido, max, tipo):
+        datos_adulto = ("0 ESTATURA", "1 PESO", "2 PROFUNDIDAD ABDOMINAL", "3 PLIEGUES TRICEPS",
+                        "4 PLIEGUES SUBESCAPULAR", "5 PLIEGUES BICEPS", "6 PLIEGUES CRESTA ILIACA",
+                        "7 PERIMETRO BRAZO RELAJADO", "8 PERIMETRO BRAZO FLEXIONADO CONTRAIDO", "9 PERIMETRO MUÑECA",
+                        "10 PERIMETRO MINIMO CINTURA", "11 PERIMETRO ABDOMINAL", "12 PERIMETRO CADERAS")
+        datos_atleta = ("0 ESTATURA", "1 PESO", "2 ESTATURA SENTADO", "3 ENVERGADURA", "4 PROFUNDIDAD ABDOMINAL",
+                        "5 LONGITUD ACROMIO-DEDAL", "6 PLIEGUES TRICEPS", "7 PLIEGUES SUBESCAPULAR",
+                        "8 PLIEGUES BICEPS", "9 PLIEGUES CRESTA ILIACA", "10 PLIEGUES SUPRAESPINAL",
+                        "11 PLIEGUES ABDOMINAL", "12 PLIEGUES MUSLO FRONTAL", "13 PLIEGUES PANTORRILLA",
+                        "14 PERIMETRO BRAZO RELAJADO", "15 PERIMETRO BRAZO FLEXIONADO CONTRAIDO", "16 PERIMETRO MUÑECA",
+                        "17 PERIMETRO ABDOMINAL", "18 PERIMETRO CEFALICO", "19 PERIMETRO TORAX", "20 PERIMETRO CUELLO",
+                        "21 PERIMETRO MAXIMO ANTEBRAZO DERECHO", "22 PERIMETRO MAXIMO ANTEBRAZO IZQUIERDO",
+                        "23 PERIMETRO MUSLO DERECHO, 1CM DEL PLIEGUE DEL MUSLO",
+                        "24 PERIMETRO MUSLO IZQUIERDO,1CM DEL PLIEGUE DEL MUSLO", "25 PERIMETRO MUSLO MEDIO",
+                        "26 PERIMETRO PANTORRILLA", "27 PERIMETRO MINIMO DEL TOBILLO", "28 LONGITUD ACROMIALE RADIALE",
+                        "29 RADIALE-STYLION", "30 MIDSTYLION-DACTYLION", "31 ALTURA ILIOSPINALE",
+                        "32 ALTURA TROCHANTERION", "33 TROCHANTERION-TIBIALE LATERALE", "34 ALTURA TIBIALE LATERALE",
+                        "35 Tibiale LATERALE-SPHYRION TIBIALE", "36 DDIAMETRO BIACROMIAL", "37 DIAMETRO BILIOCRISTAL",
+                        "38 Largo del pie", "39 ANCHURA DEL TORAX TRANSVERSO",
+                        "40 PROFUNDIDAD DEL TORAX ANTERIOR-POSTERIOR", "41 DIAMETRO BIEPICONDILAR DEL HUMERO",
+                        "42 DIAMETRO BIEPICONDILAR DEL FEMUR")
+
+        if tipo == "Adulto":
+            contador_tipo = 0
+            while contador_tipo < 13:
+                # combobox_dato.addItem(datos_adulto[contador_tipo])
+                print("done")
+                contador_tipo += 1
+        elif tipo == "Atleta":
+            contador_tipo = 0
+            while contador_tipo < 43:
+                # combobox_dato.addItem(datos_atleta[contador_tipo])
+                print("done")
+                contador_tipo += 1
+            print("done")
         contador_p = 0
         contador_c = 0
         while contador_p < max:
@@ -30,20 +64,25 @@ def inicio():
                 print("good paciente")
                 while contador_c < len(all_data[contador_p][1]):
                     if contador_c != 0:
-                        # combobox_cita1.addItem(str(all_data[contador_p][4]))
-                        # combobox_cita2.addItem(str(all_data[contador_p][4]))
-                        print(str(contador_c)+" "+str(all_data[contador_p][1][contador_c][13])+" "+str(all_data[contador_p][1][contador_c][14]))
+                        # combobox_cita1.addItem(str(contador_c),str(all_data[contador_p][1][contador_c][13]),
+                        # str(all_data[contador_p][1][contador_c][14]))
+                        # combobox_cita2.addItem(str(contador_c),str(all_data[contador_p][1][contador_c][13]),
+                        # str(all_data[contador_p][1][contador_c][14]))
                         contador_c += 1
                     else:
-                        # combobox_cita1.addItem(str(all_data[contador_p][4]))
-                        # combobox_cita2.addItem(str(all_data[contador_p][4]))
-                        print(str(contador_c)+" "+str(all_data[contador_p][4])+" "+str(all_data[contador_p][5]))
+                        # combobox_cita1.addItem(str(contador_c)str(all_data[contador_p][4]),
+                        # str(all_data[contador_p][5]))
+                        # combobox_cita2.addItem(str(contador_c)str(all_data[contador_p][4]),
+                        # str(all_data[contador_p][5]))
                         contador_c += 1
                 else:
                     contador_p += 1
             else:
                 contador_p += 1
                 print("no es el paciente")
+
+    def cambio_cita1():
+        print("si")
 
     data = []
     ##el contador contiene = pacientes adultos, pacientes atletas, pacientes totales, hombres, mujeres
@@ -126,19 +165,21 @@ def inicio():
             contadores[5] += len(datos.get_medidas())
         else:
             print("error")
-    #self.lbl_cita_total.setText(contadores[4])
+    # self.lbl_cita_total.setText(contadores[4])
 
     ##esto llena la combobox de paciente con los pacientes
 
     # for position, datos in enumerate(data):
-    #     ##combobox_paciente1.addItem(str(datos.__dict__.get('name')), str(datos.__dict__.get('doc')))
-    print(str(datos.__dict__.get('name')), str(datos.__dict__.get('doc')))
-    ##al seleccionar un paciente empieza a cargar las citas de este
+    #     combobox_paciente1.addItem(str(datos.__dict__.get('name')), str(datos.__dict__.get('doc')),
+    #     str(datos.__dict__.get('t_pac')))
+
+    # al seleccionar un paciente empieza a cargar las citas de este y que datos puede comparar
+
     # contenido_raw = combobox_paciente1.currentText()
     # contenido_split = contenido_raw.split
-    # contenido = contenido_split[2]
-    # combobox_paciente1.currentTextChanged.connect(self.cambio_paciente(contenido))
-    cambio_paciente("CI-12123123",contadores[2])
+    # contenido = contenido_split[1]
+    # tipo = contenido_splot[2]
+    # combobox_paciente1.currentTextChanged.connect(self.cambio_paciente(contenido,contador[2],tipo))
 
 
 class Patient:
