@@ -2,6 +2,7 @@ from fpdf import FPDF
 from dateutil.relativedelta import relativedelta
 from datetime import datetime
 
+
 def create_pdf_atleta(filename):
     apellidos = "rodriguez ralei"
     nombres = "gustavo alexander"
@@ -30,7 +31,7 @@ def create_pdf_atleta(filename):
     pdf = FPDF('P', 'pt', (2067, 2756))
     pdf.add_page()
     pdf.set_font("Helvetica", "", 45)
-    pdf.image("formato_atleta_1.jpg", 0, 0)
+    pdf.image("images/formato_atleta_1.jpg", 0, 0)
     top = pdf.y
     offset = pdf.x + 40
     pdf.multi_cell(0, 10, f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
@@ -52,32 +53,32 @@ def create_pdf_atleta(filename):
     pdf.x = offset
 
     pdf.multi_cell(0, 9, f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-                          f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-                          f"                                                                                     "
-                          f"{imc}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-                          f"\n"
-                          f"                                                                                     "
-                          f"{por_grasa}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-                          f"\n\n\n"
-                          f"                                                                                     "
-                          f"{mlg}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-                          f"                                                                                     "
-                          f"{camb}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-                          f"\n"
-                          f"                                                                                     "
-                          f"{iamb}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-                          f"\n"
-                          f"                                                                                     "
-                          f"{complexion}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-                          f"\n\n\n\n\n\n                   "
-                          f"                                                                                     "
-                          f"{endomorfo}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-                          f"                   "
-                          f"                                                                                     "
-                          f"{mesomorfo}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-                          f"                   "
-                          f"                                                                                     "
-                          f"{ectomorfo}")
+                         f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                         f"                                                                                     "
+                         f"{imc}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                         f"\n"
+                         f"                                                                                     "
+                         f"{por_grasa}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                         f"\n\n\n"
+                         f"                                                                                     "
+                         f"{mlg}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                         f"                                                                                     "
+                         f"{camb}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                         f"\n"
+                         f"                                                                                     "
+                         f"{iamb}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                         f"\n"
+                         f"                                                                                     "
+                         f"{complexion}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                         f"\n\n\n\n\n\n                   "
+                         f"                                                                                     "
+                         f"{endomorfo}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                         f"                   "
+                         f"                                                                                     "
+                         f"{mesomorfo}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                         f"                   "
+                         f"                                                                                     "
+                         f"{ectomorfo}")
 
     ##fraccionamiento cororal =
     masa_piel = 0
@@ -95,36 +96,36 @@ def create_pdf_atleta(filename):
 
     pdf.add_page()
     pdf.set_font("Helvetica", "", 45)
-    pdf.image("formato_atleta_2.jpg", 0, 0)
+    pdf.image("images/formato_atleta_2.jpg", 0, 0)
     pdf.y = top
     pdf.x = offset
 
     pdf.multi_cell(0, 9, f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-                          f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-                          f"                                                  "
-                          f"{masa_piel}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-                          f"                                             "
-                          f"{masa_osea}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-                          f"                                                  "
-                          f"{tegido_adiposo}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-                          f"                                                  "
-                          f"{masa_muscular}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-                          f"                                                "
-                          f"{masa_residual}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-                          f"                                            "
-                          f"{masa_total}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-                          f"                              "
-                          f"{indice_cormico}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-                          f"                              "
-                          f"{longitud_relativa}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-                          f"                              "
-                          f"{indice_esqueletico}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-                          f"                              "
-                          f"{envergadura_relativa}")
+                         f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                         f"                                                  "
+                         f"{masa_piel}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                         f"                                             "
+                         f"{masa_osea}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                         f"                                                  "
+                         f"{tegido_adiposo}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                         f"                                                  "
+                         f"{masa_muscular}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                         f"                                                "
+                         f"{masa_residual}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                         f"                                            "
+                         f"{masa_total}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                         f"                              "
+                         f"{indice_cormico}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                         f"                              "
+                         f"{longitud_relativa}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                         f"                              "
+                         f"{indice_esqueletico}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                         f"                              "
+                         f"{envergadura_relativa}")
 
     pdf.add_page()
     pdf.set_font("Helvetica", "", 45)
-    pdf.image("formato_atleta_3.jpg", 0, 0)
+    pdf.image("images/formato_atleta_3.jpg", 0, 0)
     pdf.y = top
     pdf.x = offset
 
@@ -265,19 +266,19 @@ def create_pdf_atleta(filename):
 
     def longitud_relativa_medic(lonitud_relativa):
         if longitud_relativa <= 44.9:
-            return "Braquibraquial \n\n\n\n\n\n\n\n       (extremidad superior corta)"
+            return "Braquibraquial \n\n\n\n\n\n\n\n                   (extremidad superior corta)"
         elif 45 < indice_cormico < 46.9:
-            return "Mesobraquial \n\n\n\n\n\n\n\n       (extremidad superior intermedia)"
+            return "Mesobraquial \n\n\n\n\n\n\n\n                   (extremidad superior intermedia)"
         elif indice_cormico >= 47:
-            return "Macrobraquial \n\n\n\n\n\n\n\n       (extremidad superior larga)"
+            return "Macrobraquial \n\n\n\n\n\n\n\n                   (extremidad superior larga)"
 
     def indice_esqueletico_medic(indice_esqueletico):
         if indice_esqueletico <= 84.9:
-            return "Braquiesquélico \n\n\n\n\n\n\n\n       (extremidad inferior corta)"
+            return "Braquiesquélico \n\n\n\n\n\n\n\n                   (extremidad inferior corta)"
         elif 85 < indice_esqueletico < 89.9:
-            return "Mesoesquélico \n\n\n\n\n\n\n\n       (extremidad inferior mediana)"
+            return "Mesoesquélico \n\n\n\n\n\n\n\n                   (extremidad inferior mediana)"
         elif indice_esqueletico >= 90:
-            return "Macroesquélico \n\n\n\n\n\n\n\n       (extremidad inferior larga)"
+            return "Macroesquélico \n\n\n\n\n\n\n\n                   (extremidad inferior larga)"
 
     imc_info = imc_medic(imc)
     mlg_info = mlg_medic(mlg, sexo)
@@ -291,45 +292,53 @@ def create_pdf_atleta(filename):
     valory = -2
 
     pdf.multi_cell(0, 10, f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-                          f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n       "
+                          f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n                   "
                           f"Con un Indicé de masa corporal de "
-                          f"{imc} usted califica que posee \n\n\n\n\n\n\n\n       {imc_info}."
-                          f"\n\n\n\n\n\n\n\n\n\n\n\n\n       "
-                          f"Con un Indicé de masa libre de grasa de {mlg} usted esta \n\n\n\n\n\n\n\n       "
-                          f"{mlg_info}.\n\n\n\n\n\n\n\n\n\n\n\n\n       "
+                          f"{imc} usted califica que posee \n\n\n\n\n\n\n\n                   {imc_info}."
+                          f"\n\n\n\n\n\n\n\n\n\n\n\n\n                   "
+                          f"Con un Indicé de masa libre de grasa de {mlg} usted esta \n\n\n\n\n\n\n\n                   "
+                          f"{mlg_info}.\n\n\n\n\n\n\n\n\n\n\n\n\n                   "
                           f"Con un Indicé del área muscular del brazo de {iamb} "
-                          f"en percentiles se puede \n\n\n\n\n\n\n\n       afirmar que usted posee "
-                          f"{iamb_info}.\n\n\n\n\n\n\n\n\n\n\n\n\n       "
+                          f"en percentiles se puede \n\n\n\n\n\n\n\n                   afirmar que usted posee "
+                          f"{iamb_info}.\n\n\n\n\n\n\n\n\n\n\n\n\n                   "
                           f"Con un Indicé de complexión de {complexion} usted posee una "
-                          f"{complexion_info}.\n\n\n\n\n\n\n\n\n\n\n\n\n       "
+                          f"{complexion_info}.\n\n\n\n\n\n\n\n\n\n\n\n\n                   "
                           f"Con un Indicé cormico de {indice_cormico} usted califica como"
-                          f"{cormico_info}.\n\n\n\n\n\n\n\n\n\n\n\n\n       "
+                          f"{cormico_info}.\n\n\n\n\n\n\n\n\n\n\n\n\n                   "
                           f"Con una longitud relativa de {longitud_relativa} usted califica como "
-                          f"{long_info}.\n\n\n\n\n\n\n\n\n\n\n\n\n       "
+                          f"{long_info}.\n\n\n\n\n\n\n\n\n\n\n\n\n                   "
                           f"Con un Indicé esquelético de {indice_esqueletico} usted califica como "
-                          f"{icor_info}.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-                          f"                                                                           "
-                          f"Valor en X: {valorx}\n\n\n\n\n\n\n\n\n\n\n"
-                          f"                                                                           "
+                          f"{icor_info}.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                          f"                                                                                          "
+                          f"Valor en X: {valorx}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                          f"                                                                                          "
                           f"Valor en Y: {valory}")
 
-    ix = 400
-    iy = 2000
-
-    pdf.image("basura/big_good.png", ix, iy)
+    ix = 300
+    iy = 2130
+    pdf.image("images/big_good.png", ix, iy)
+    img_endo_x = 100
+    img_endo_y = 2500
+    img_meso_x = 520
+    img_meso_y = 1920
+    img_ecto_x = 900
+    img_ecto_y = 2500
+    pdf.image("images/endomorfo.png", img_endo_x, img_endo_y)
+    pdf.image("images/mesomorfo.png", img_meso_x, img_meso_y)
+    pdf.image("images/ectomorfo.png", img_ecto_x, img_ecto_y)
 
     ##el 3 y el -2 son valores que coloque de ejemplo y deben remplazarse por los valores que da logica de atleta para
     ##saber el posicionamiento en la grafica del somatotipo
 
     x = valorx * 25
     y = (valory * 25) * -1
-    imgx = x + (ix + 300 - 12.5)
-    imgy = y + (iy + 300 - 12.5)
+    imgx = x + (ix + 290 - 12.5)
+    imgy = y + (iy + 320 - 12.5)
 
-    pdf.image("basura/dot.png", ix + 300, iy + 300)
-    pdf.image("basura/dot.png", imgx, imgy)
+    pdf.image("images/dot.png", imgx, imgy)
 
-    pdf.output("reporte.pdf", "F")
+    pdf.output("informe_atleta.pdf", "F")
+
 
 if __name__ == "__main__":
     create_pdf_atleta("new.pdf")
@@ -635,21 +644,21 @@ if __name__ == "__main__":
 #             elif indice_c >= 54.1:
 #                 return "Macrocórmico (Tronco largo)"
 #
-#     def longitud_relativa_medic(lonitud_relativa):
+#         def longitud_relativa_medic(lonitud_relativa):
 #         if longitud_relativa <= 44.9:
-#             return "Braquibraquial \n\n\n\n\n\n\n\n       (extremidad superior corta)"
+#             return "Braquibraquial \n\n\n\n\n\n\n\n                   (extremidad superior corta)"
 #         elif 45 < indice_cormico < 46.9:
-#             return "Mesobraquial \n\n\n\n\n\n\n\n       (extremidad superior intermedia)"
+#             return "Mesobraquial \n\n\n\n\n\n\n\n                   (extremidad superior intermedia)"
 #         elif indice_cormico >= 47:
-#             return "Macrobraquial \n\n\n\n\n\n\n\n       (extremidad superior larga)"
+#             return "Macrobraquial \n\n\n\n\n\n\n\n                   (extremidad superior larga)"
 #
 #     def indice_esqueletico_medic(indice_esqueletico):
 #         if indice_esqueletico <= 84.9:
-#             return "Braquiesquélico \n\n\n\n\n\n\n\n       (extremidad inferior corta)"
+#             return "Braquiesquélico \n\n\n\n\n\n\n\n                   (extremidad inferior corta)"
 #         elif 85 < indice_esqueletico < 89.9:
-#             return "Mesoesquélico \n\n\n\n\n\n\n\n       (extremidad inferior mediana)"
+#             return "Mesoesquélico \n\n\n\n\n\n\n\n                   (extremidad inferior mediana)"
 #         elif indice_esqueletico >= 90:
-#             return "Macroesquélico \n\n\n\n\n\n\n\n       (extremidad inferior larga)"
+#             return "Macroesquélico \n\n\n\n\n\n\n\n                   (extremidad inferior larga)"
 #
 #     imc_info = imc_medic(imc)
 #     mlg_info = mlg_medic(mlg, sexo)
@@ -663,50 +672,57 @@ if __name__ == "__main__":
 #     valory = -2
 #
 #     pdf.multi_cell(0, 10, f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-#                           f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n       "
+#                           f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n                   "
 #                           f"Con un Indicé de masa corporal de "
-#                           f"{imc} usted califica que posee \n\n\n\n\n\n\n\n       {imc_info}."
-#                           f"\n\n\n\n\n\n\n\n\n\n\n\n\n       "
-#                           f"Con un Indicé de masa libre de grasa de {mlg} usted esta \n\n\n\n\n\n\n\n       "
-#                           f"{mlg_info}.\n\n\n\n\n\n\n\n\n\n\n\n\n       "
+#                           f"{imc} usted califica que posee \n\n\n\n\n\n\n\n                   {imc_info}."
+#                           f"\n\n\n\n\n\n\n\n\n\n\n\n\n                   "
+#                           f"Con un Indicé de masa libre de grasa de {mlg} usted esta \n\n\n\n\n\n\n\n                   "
+#                           f"{mlg_info}.\n\n\n\n\n\n\n\n\n\n\n\n\n                   "
 #                           f"Con un Indicé del área muscular del brazo de {iamb} "
-#                           f"en percentiles se puede \n\n\n\n\n\n\n\n       afirmar que usted posee "
-#                           f"{iamb_info}.\n\n\n\n\n\n\n\n\n\n\n\n\n       "
+#                           f"en percentiles se puede \n\n\n\n\n\n\n\n                   afirmar que usted posee "
+#                           f"{iamb_info}.\n\n\n\n\n\n\n\n\n\n\n\n\n                   "
 #                           f"Con un Indicé de complexión de {complexion} usted posee una "
-#                           f"{complexion_info}.\n\n\n\n\n\n\n\n\n\n\n\n\n       "
+#                           f"{complexion_info}.\n\n\n\n\n\n\n\n\n\n\n\n\n                   "
 #                           f"Con un Indicé cormico de {indice_cormico} usted califica como"
-#                           f"{cormico_info}.\n\n\n\n\n\n\n\n\n\n\n\n\n       "
+#                           f"{cormico_info}.\n\n\n\n\n\n\n\n\n\n\n\n\n                   "
 #                           f"Con una longitud relativa de {longitud_relativa} usted califica como "
-#                           f"{long_info}.\n\n\n\n\n\n\n\n\n\n\n\n\n       "
+#                           f"{long_info}.\n\n\n\n\n\n\n\n\n\n\n\n\n                   "
 #                           f"Con un Indicé esquelético de {indice_esqueletico} usted califica como "
-#                           f"{icor_info}.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-#                           f"                                                                           "
-#                           f"Valor en X: {valorx}\n\n\n\n\n\n\n\n\n\n\n"
-#                           f"                                                                           "
+#                           f"{icor_info}.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+#                           f"                                                                                          "
+#                           f"Valor en X: {valorx}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+#                           f"                                                                                          "
 #                           f"Valor en Y: {valory}")
 #
-#     ix = 400
-#     iy = 2000
+#     ix = 300
+#     iy = 2130
+#     pdf.image("images/big_good.png", ix, iy)
+#     img_endo_x = 100
+#     img_endo_y = 2500
+#     img_meso_x = 520
+#     img_meso_y = 1920
+#     img_ecto_x = 900
+#     img_ecto_y = 2500
+#     pdf.image("images/endomorfo.png", img_endo_x, img_endo_y)
+#     pdf.image("images/mesomorfo.png", img_meso_x, img_meso_y)
+#     pdf.image("images/ectomorfo.png", img_ecto_x, img_ecto_y)
 #
-#     #pdf.image("basura/big_good.png", ix, iy)
-#
-#     ##el 3 y el -2 son valores que coloqu de ejemplo y deben remplazarse por los valores que da logica de atleta para
+#     ##el 3 y el -2 son valores que coloque de ejemplo y deben remplazarse por los valores que da logica de atleta para
 #     ##saber el posicionamiento en la grafica del somatotipo
 #
 #     x = valorx * 25
 #     y = (valory * 25) * -1
-#     imgx = x + (ix + 300 - 12.5)
-#     imgy = y + (iy + 300 - 12.5)
+#     imgx = x + (ix + 290 - 12.5)
+#     imgy = y + (iy + 320 - 12.5)
 #
-#     #pdf.image("basura/dot.png", ix + 300, iy + 300)
-#     #pdf.image("basura/dot.png", imgx, imgy)
+#     pdf.image("images/dot.png", imgx, imgy)
 #
 #     msg = QMessageBox()
 #     QMessageBox.information(msg, "Informe",
 #                             "El informe fue realizado con exito.")
 #
 #     dia = datetime.datetime.now().strftime("%Y_%m_%d_%H_%M_%S_")
-#     docname = dia + "reporte.pdf"
+#     docname = dia + "informe.pdf"
 #
 #     pdf.output(docname, "F")
 

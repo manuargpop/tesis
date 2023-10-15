@@ -6809,7 +6809,7 @@ border-radius: 5px;
                 <property name="geometry">
                  <rect>
                   <x>0</x>
-                  <y>0</y>
+                  <y>-180</y>
                   <width>1209</width>
                   <height>1098</height>
                  </rect>
@@ -8310,7 +8310,7 @@ background-color: rgb(255, 255, 255);
                       <property name="frameShadow">
                        <enum>QFrame::Raised</enum>
                       </property>
-                      <widget class="QPushButton" name="btn_est">
+                      <widget class="QPushButton" name="btn_comparar">
                        <property name="geometry">
                         <rect>
                          <x>430</x>

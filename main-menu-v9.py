@@ -8402,6 +8402,7 @@ class Ui_MainWindow(object):
                                         if cont4 == 8:
                                             for i in range(7):
                                                 medidas.append(table5.item(cont5, 4).text())
+                                                cont5 += 1
                                         cont4 += 1
                                 cont3 += 1
                         cont2 += 1

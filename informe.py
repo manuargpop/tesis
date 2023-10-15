@@ -41,7 +41,7 @@ def create_pdf(filename):
     pdf = FPDF('P', 'pt', (2067, 2756))
     pdf.add_page()
     pdf.set_font("Helvetica", "", 45)
-    pdf.image("images/formato_informe.jpg", 0, 0)
+    pdf.image("images/formato_adulto_1.jpg", 0, 0)
     top = pdf.y
     offset = pdf.x + 40
     pdf.multi_cell(0, 10, f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
@@ -66,17 +66,16 @@ def create_pdf(filename):
                           f"\n\n\n\n\n\n\n\n\n\n\n"
                           f"                                                            "
                           f"                         {imc}"
-                          f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                          f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
                           f"                                                            "
                           f"                         {icc}"
                           f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
                           f"                                                            "
                           f"                         {ice}"
-                          f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                          f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
                           f"                                                            "
                           f"                         {por_grasa}"
-                          f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-                          f"\n\n"
+                          f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
                           f"                                                            "
                           f"                         {pe_grasa}"
                           f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
@@ -85,22 +84,22 @@ def create_pdf(filename):
                           f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
                           f"                                                            "
                           f"                         {mlg}"
-                          f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                          f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
                           f"                                                            "
                           f"                         {camb}"
-                          f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                          f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
                           f"                                                            "
                           f"                         {iamb}"
                           f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
                           f"                                                            "
                           f"                         {complexion}"
-                          f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                          f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
                           f"                                                            "
                           f"                         {peso_ideal}")
 
     pdf.add_page()
     pdf.set_font("Helvetica", "", 45)
-    pdf.image("formato2.jpg", 0, 0)
+    pdf.image("images/formato_adulto_2.jpg", 0, 0)
     pdf.y = top
     pdf.x = offset
 
@@ -288,23 +287,23 @@ def create_pdf(filename):
     complexion_info = complexion_medic(complexion, sexo)
     peso_ideal_info = peso_ideal_medic(peso, peso_ideal)
 
-    pdf.multi_cell(0, 20, f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n       "
+    pdf.multi_cell(0, 20, f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n                     "
                           f"Con un Indicé de Masa Corporal de "
-                          f"{imc} usted califica que posee\n\n\n       {imc_info}.\n\n\n\n\n\n       "
+                          f"{imc} usted califica que posee\n\n\n                     {imc_info}."
+                          f"\n\n\n\n\n\n                     "
                           f"Con un Indicé Cintura Cadera de {icc} usted califica como "
-                          f"{icc_info} y \n\n\n       {icc_text}.\n\n\n\n\n\n\n       "
-                          f"Con un Indicé de Masa Libre de Grasa de {mlg} usted esta \n\n\n       "
-                          f"{mlg_info}.\n\n\n\n\n\n\n       "
+                          f"{icc_info} y \n\n\n                     {icc_text}.\n\n\n\n\n\n\n                     "
+                          f"Con un Indicé de Masa Libre de Grasa de {mlg} usted esta \n\n\n                     "
+                          f"{mlg_info}.\n\n\n\n\n\n\n                     "
                           f"Con un Indicé del Área Muscular del brazo de {iamb} "
-                          f"en Percentiles se puede afirmar \n\n\n       que usted posee "
-                          f"{iamb_info}.\n\n\n\n\n\n\n       "
+                          f"en Percentiles se \n\n\n                     puede afirmar que usted posee "
+                          f"{iamb_info}.\n\n\n\n\n\n\n                     "
                           f"Con un Indicé de Complexión de {complexion} usted posee una "
-                          f"{complexion_info}.\n\n\n\n\n\n\n       "
-                          f"Con un Porcentaje de Peso Ideal del {peso_ideal}% usted posee "
+                          f"{complexion_info}.\n\n\n\n\n\n\n                     "
+                          f"Con un Porcentaje de Peso Ideal del {peso_ideal}% usted posee \n\n\n                     "
                           f"{peso_ideal_info}.")
 
-
-    pdf.output("reporte.pdf", "F")
+    pdf.output("informe_adulto.pdf", "F")
 
 # def create_pdf(self, data, med):
 #
@@ -365,7 +364,7 @@ def create_pdf(filename):
 #     pdf = FPDF('P', 'pt', (2067, 2756))
 #     pdf.add_page()
 #     pdf.set_font("Helvetica", "", 45)
-#     pdf.image("images/formato_informe.jpg", 0, 0)
+#     pdf.image("images/formato_adulto_1.jpg", 0, 0)
 #     top = pdf.y
 #     offset = pdf.x + 40
 #     pdf.multi_cell(0, 10, f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
@@ -390,17 +389,16 @@ def create_pdf(filename):
 #                           f"\n\n\n\n\n\n\n\n\n\n\n"
 #                           f"                                                            "
 #                           f"                         {imc}"
-#                           f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+#                           f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 #                           f"                                                            "
 #                           f"                         {icc}"
 #                           f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 #                           f"                                                            "
 #                           f"                         {ice}"
-#                           f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+#                           f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 #                           f"                                                            "
 #                           f"                         {por_grasa}"
-#                           f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-#                           f"\n\n"
+#                           f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 #                           f"                                                            "
 #                           f"                         {pe_grasa}"
 #                           f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
@@ -409,22 +407,22 @@ def create_pdf(filename):
 #                           f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 #                           f"                                                            "
 #                           f"                         {mlg}"
-#                           f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+#                           f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 #                           f"                                                            "
 #                           f"                         {camb}"
-#                           f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+#                           f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 #                           f"                                                            "
 #                           f"                         {iamb}"
 #                           f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 #                           f"                                                            "
 #                           f"                         {complexion}"
-#                           f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+#                           f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 #                           f"                                                            "
 #                           f"                         {peso_ideal}")
 #
 #     pdf.add_page()
 #     pdf.set_font("Helvetica", "", 45)
-#     pdf.image("formato2.jpg", 0, 0)
+#     pdf.image("images/formato_adulto_2.jpg", 0, 0)
 #     pdf.y = top
 #     pdf.x = offset
 #
@@ -615,26 +613,27 @@ def create_pdf(filename):
 #     complexion_info = complexion_medic(complexion, sexo)
 #     peso_ideal_info = peso_ideal_medic(peso, peso_ideal)
 #
-#     pdf.multi_cell(0, 20, f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n       "
+#     pdf.multi_cell(0, 20, f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n                     "
 #                           f"Con un Indicé de Masa Corporal de "
-#                           f"{imc} usted califica que posee\n\n\n       {imc_info}.\n\n\n\n\n\n       "
+#                           f"{imc} usted califica que posee\n\n\n                     {imc_info}."
+#                           f"\n\n\n\n\n\n                     "
 #                           f"Con un Indicé Cintura Cadera de {icc} usted califica como "
-#                           f"{icc_info} y \n\n\n       {icc_text}.\n\n\n\n\n\n       "
-#                           f"Con un Indicé de Masa Libre de Grasa de {mlg} usted esta \n\n\n       "
-#                           f"{mlg_info}.\n\n\n\n\n\n       "
+#                           f"{icc_info} y \n\n\n                     {icc_text}.\n\n\n\n\n\n\n                     "
+#                           f"Con un Indicé de Masa Libre de Grasa de {mlg} usted esta \n\n\n                     "
+#                           f"{mlg_info}.\n\n\n\n\n\n\n                     "
 #                           f"Con un Indicé del Área Muscular del brazo de {iamb} "
-#                           f"en Percentiles se puede afirmar \n\n\n       que usted posee "
-#                           f"{iamb_info}.\n\n\n\n\n\n       "
+#                           f"en Percentiles se \n\n\n                     puede afirmar que usted posee "
+#                           f"{iamb_info}.\n\n\n\n\n\n\n                     "
 #                           f"Con un Indicé de Complexión de {complexion} usted posee una "
-#                           f"{complexion_info}.\n\n\n\n\n\n       "
-#                           f"Con un Porcentaje de Peso Ideal del {peso_ideal}% usted posee "
+#                           f"{complexion_info}.\n\n\n\n\n\n\n                     "
+#                           f"Con un Porcentaje de Peso Ideal del {peso_ideal}% usted posee \n\n\n                     "
 #                           f"{peso_ideal_info}.")
 #
 #     msg = QMessageBox()
 #     QMessageBox.information(msg, "Informe",
 #                             "El informe fue realizado con exito.")
 #     dia = datetime.datetime.now().strftime("%Y_%m_%d_%H_%M_%S_")
-#     docname = dia + "reporte.pdf"
+#     docname = dia + "informe.pdf"
 #
 #     pdf.output(docname, "F")
 
