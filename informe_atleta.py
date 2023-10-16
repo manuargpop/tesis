@@ -317,6 +317,9 @@ def create_pdf_atleta(filename):
     ix = 300
     iy = 2130
     pdf.image("images/big_good.png", ix, iy)
+    i2x = ix - 25
+    i2y = iy - 26
+    pdf.image("images/regla2.png", i2x, i2y)
     img_endo_x = 100
     img_endo_y = 2500
     img_meso_x = 520
@@ -331,7 +334,7 @@ def create_pdf_atleta(filename):
     ##saber el posicionamiento en la grafica del somatotipo
 
     x = valorx * 25
-    y = (valory * 25) * -1
+    y = (valory * 30) * -1
     imgx = x + (ix + 290 - 12.5)
     imgy = y + (iy + 320 - 12.5)
 
