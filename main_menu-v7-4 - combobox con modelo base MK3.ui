@@ -6816,7 +6816,7 @@ border-radius: 5px;
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_48">
                  <item>
-                  <widget class="QFrame" name="fr_content">
+                  <widget class="QFrame" name="frame_est_general">
                    <property name="minimumSize">
                     <size>
                      <width>1000</width>
@@ -6837,7 +6837,7 @@ border-radius: 5px;
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_49">
                     <item>
-                     <widget class="QFrame" name="fr_datasystem_content">
+                     <widget class="QFrame" name="fr_estadisticas_1">
                       <property name="frameShape">
                        <enum>QFrame::StyledPanel</enum>
                       </property>
@@ -6852,7 +6852,7 @@ border-radius: 5px;
                         <number>6</number>
                        </property>
                        <item row="2" column="2">
-                        <widget class="QFrame" name="frame_9">
+                        <widget class="QFrame" name="frame_cant_hombres">
                          <property name="minimumSize">
                           <size>
                            <width>0</width>
@@ -6893,7 +6893,7 @@ border-radius: 10px;</string>
                            <number>0</number>
                           </property>
                           <item>
-                           <widget class="QLabel" name="label_25">
+                           <widget class="QLabel" name="label_cant_hombres_icono">
                             <property name="minimumSize">
                              <size>
                               <width>100</width>
@@ -6935,7 +6935,7 @@ padding: 10px;</string>
                            </widget>
                           </item>
                           <item alignment="Qt::AlignTop">
-                           <widget class="QFrame" name="frame_18">
+                           <widget class="QFrame" name="frame_cant_hombres_titulo">
                             <property name="styleSheet">
                              <string notr="true">border: none;</string>
                             </property>
@@ -6947,7 +6947,7 @@ padding: 10px;</string>
                             </property>
                             <layout class="QVBoxLayout" name="verticalLayout_66">
                              <item>
-                              <widget class="QLabel" name="label_27">
+                              <widget class="QLabel" name="label_cant_hombres_titulo">
                                <property name="minimumSize">
                                 <size>
                                  <width>200</width>
@@ -6981,7 +6981,7 @@ color: rgb(100, 100, 100);</string>
                            </widget>
                           </item>
                           <item>
-                           <widget class="QFrame" name="frame_15">
+                           <widget class="QFrame" name="frame_cant_hombres_num">
                             <property name="styleSheet">
                              <string notr="true">border: none;</string>
                             </property>
@@ -7030,7 +7030,7 @@ color: rgb(100, 100, 100);</string>
                         </widget>
                        </item>
                        <item row="2" column="0">
-                        <widget class="QFrame" name="frame_7">
+                        <widget class="QFrame" name="frame_edadprom">
                          <property name="minimumSize">
                           <size>
                            <width>0</width>
@@ -7071,7 +7071,7 @@ border-radius: 10px;</string>
                            <number>0</number>
                           </property>
                           <item>
-                           <widget class="QLabel" name="label_31">
+                           <widget class="QLabel" name="label_edadprom_icono">
                             <property name="minimumSize">
                              <size>
                               <width>100</width>
@@ -7113,7 +7113,7 @@ padding: 10px;</string>
                            </widget>
                           </item>
                           <item alignment="Qt::AlignTop">
-                           <widget class="QFrame" name="frame_26">
+                           <widget class="QFrame" name="frame_edadprom_titulo">
                             <property name="styleSheet">
                              <string notr="true">border: none;</string>
                             </property>
@@ -7125,7 +7125,7 @@ padding: 10px;</string>
                             </property>
                             <layout class="QVBoxLayout" name="verticalLayout_70">
                              <item>
-                              <widget class="QLabel" name="label_33">
+                              <widget class="QLabel" name="label_edadprom_titulo">
                                <property name="minimumSize">
                                 <size>
                                  <width>200</width>
@@ -7159,7 +7159,7 @@ color: rgb(100, 100, 100);</string>
                            </widget>
                           </item>
                           <item>
-                           <widget class="QFrame" name="frame_25">
+                           <widget class="QFrame" name="frame_edadprom_num">
                             <property name="styleSheet">
                              <string notr="true">border: none;</string>
                             </property>
@@ -7208,7 +7208,7 @@ color: rgb(100, 100, 100);</string>
                         </widget>
                        </item>
                        <item row="2" column="1">
-                        <widget class="QFrame" name="frame_8">
+                        <widget class="QFrame" name="frame_cant_mujeres">
                          <property name="minimumSize">
                           <size>
                            <width>0</width>
@@ -7249,7 +7249,7 @@ border-radius: 10px;</string>
                            <number>0</number>
                           </property>
                           <item>
-                           <widget class="QLabel" name="label_28">
+                           <widget class="QLabel" name="label_cant_mujeres_icono">
                             <property name="minimumSize">
                              <size>
                               <width>100</width>
@@ -7291,7 +7291,7 @@ padding: 10px;</string>
                            </widget>
                           </item>
                           <item alignment="Qt::AlignTop">
-                           <widget class="QFrame" name="frame_24">
+                           <widget class="QFrame" name="frame_cant_mujeres_titulo">
                             <property name="styleSheet">
                              <string notr="true">border: none;</string>
                             </property>
@@ -7303,7 +7303,7 @@ padding: 10px;</string>
                             </property>
                             <layout class="QVBoxLayout" name="verticalLayout_68">
                              <item>
-                              <widget class="QLabel" name="label_30">
+                              <widget class="QLabel" name="label_cant_mujeres_titulo">
                                <property name="minimumSize">
                                 <size>
                                  <width>200</width>
@@ -7337,7 +7337,7 @@ color: rgb(100, 100, 100);</string>
                            </widget>
                           </item>
                           <item>
-                           <widget class="QFrame" name="frame_21">
+                           <widget class="QFrame" name="frame_cant_mujeres_num">
                             <property name="styleSheet">
                              <string notr="true">border: none;</string>
                             </property>
@@ -7410,7 +7410,7 @@ color: rgb(100, 100, 100);</string>
                            <number>0</number>
                           </property>
                           <item>
-                           <widget class="QFrame" name="frame_6">
+                           <widget class="QFrame" name="frame_pacientetotal">
                             <property name="minimumSize">
                              <size>
                               <width>0</width>
@@ -7451,7 +7451,7 @@ border-radius: 10px;</string>
                               <number>0</number>
                              </property>
                              <item>
-                              <widget class="QLabel" name="label_2">
+                              <widget class="QLabel" name="label_pacientetotal_icono">
                                <property name="minimumSize">
                                 <size>
                                  <width>100</width>
@@ -7493,7 +7493,7 @@ padding: 10px;</string>
                               </widget>
                              </item>
                              <item>
-                              <widget class="QFrame" name="frame_12">
+                              <widget class="QFrame" name="frame_pacientetotal_center">
                                <property name="styleSheet">
                                 <string notr="true">border: none;</string>
                                </property>
@@ -7522,7 +7522,7 @@ color: rgb(100, 100, 100);</string>
                                  </widget>
                                 </item>
                                 <item row="0" column="0">
-                                 <widget class="QLabel" name="label_8">
+                                 <widget class="QLabel" name="label_pacientetotal_titulo">
                                   <property name="minimumSize">
                                    <size>
                                     <width>250</width>
@@ -7599,7 +7599,7 @@ color: rgb(100, 100, 100);</string>
                               </widget>
                              </item>
                              <item>
-                              <widget class="QFrame" name="frame_11">
+                              <widget class="QFrame" name="frame_pacientetotal_numero">
                                <property name="styleSheet">
                                 <string notr="true">border: none;</string>
                                </property>
@@ -7689,7 +7689,7 @@ border-radius: 10px;</string>
                               <number>0</number>
                              </property>
                              <item>
-                              <widget class="QLabel" name="label_3">
+                              <widget class="QLabel" name="label_citatotal_icono">
                                <property name="minimumSize">
                                 <size>
                                  <width>100</width>
@@ -7731,7 +7731,7 @@ padding: 10px;</string>
                               </widget>
                              </item>
                              <item alignment="Qt::AlignTop">
-                              <widget class="QFrame" name="frame_13">
+                              <widget class="QFrame" name="frame_citatotal_label">
                                <property name="styleSheet">
                                 <string notr="true">border: none;</string>
                                </property>
@@ -7743,7 +7743,7 @@ padding: 10px;</string>
                                </property>
                                <layout class="QVBoxLayout" name="verticalLayout_57">
                                 <item>
-                                 <widget class="QLabel" name="label_17">
+                                 <widget class="QLabel" name="label_citatota_titulo">
                                   <property name="minimumSize">
                                    <size>
                                     <width>250</width>
@@ -7777,7 +7777,7 @@ color: rgb(100, 100, 100);</string>
                               </widget>
                              </item>
                              <item>
-                              <widget class="QFrame" name="frame_14">
+                              <widget class="QFrame" name="frame_citatotal_numero">
                                <property name="styleSheet">
                                 <string notr="true">border: none;</string>
                                </property>
@@ -7832,7 +7832,7 @@ color: rgb(100, 100, 100);</string>
                      </widget>
                     </item>
                     <item alignment="Qt::AlignTop">
-                     <widget class="QFrame" name="fr_graphics">
+                     <widget class="QFrame" name="fra_graphics">
                       <property name="frameShape">
                        <enum>QFrame::StyledPanel</enum>
                       </property>
@@ -7841,7 +7841,7 @@ color: rgb(100, 100, 100);</string>
                       </property>
                       <layout class="QHBoxLayout" name="horizontalLayout_34">
                        <item>
-                        <widget class="QFrame" name="fr_grap1">
+                        <widget class="QFrame" name="fra_grap1">
                          <property name="minimumSize">
                           <size>
                            <width>0</width>
@@ -7868,7 +7868,7 @@ border-radius: 10px;</string>
                         </widget>
                        </item>
                        <item>
-                        <widget class="QFrame" name="fr_grap2">
+                        <widget class="QFrame" name="fra_grap2">
                          <property name="minimumSize">
                           <size>
                            <width>0</width>
@@ -7895,7 +7895,7 @@ border-radius: 10px;</string>
                         </widget>
                        </item>
                        <item>
-                        <widget class="QFrame" name="fr_grap3">
+                        <widget class="QFrame" name="fra_grap3">
                          <property name="minimumSize">
                           <size>
                            <width>0</width>
@@ -7925,7 +7925,7 @@ border-radius: 10px;</string>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QFrame" name="frame_22">
+                     <widget class="QFrame" name="frame_estadisticasp_titulo">
                       <property name="frameShape">
                        <enum>QFrame::StyledPanel</enum>
                       </property>
@@ -7934,7 +7934,7 @@ border-radius: 10px;</string>
                       </property>
                       <layout class="QHBoxLayout" name="horizontalLayout_40">
                        <item>
-                        <widget class="QLabel" name="label_7">
+                        <widget class="QLabel" name="label_estadp_titulo">
                          <property name="maximumSize">
                           <size>
                            <width>1250</width>
@@ -7963,7 +7963,7 @@ border: 2px solid rgb(0, 0, 61);</string>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QFrame" name="frame_5">
+                     <widget class="QFrame" name="frame_comp_combo">
                       <property name="frameShape">
                        <enum>QFrame::StyledPanel</enum>
                       </property>
@@ -8031,7 +8031,7 @@ color: white</string>
                            </widget>
                           </item>
                           <item row="3" column="0">
-                           <widget class="QFrame" name="frame_28">
+                           <widget class="QFrame" name="frame_void_2">
                             <property name="maximumSize">
                              <size>
                               <width>30</width>
@@ -8084,7 +8084,7 @@ color: white</string>
                            </widget>
                           </item>
                           <item row="5" column="3">
-                           <widget class="QFrame" name="frame_20">
+                           <widget class="QFrame" name="frame_void">
                             <property name="minimumSize">
                              <size>
                               <width>0</width>
@@ -8132,7 +8132,7 @@ background-color: rgb(255, 255, 255);
                            </widget>
                           </item>
                           <item row="3" column="5">
-                           <widget class="QFrame" name="frame_29">
+                           <widget class="QFrame" name="frame_void_3">
                             <property name="maximumSize">
                              <size>
                               <width>30</width>
@@ -8297,7 +8297,7 @@ background-color: rgb(255, 255, 255);
                      </widget>
                     </item>
                     <item>
-                     <widget class="QFrame" name="frame_27">
+                     <widget class="QFrame" name="frame_btn_comparar">
                       <property name="minimumSize">
                        <size>
                         <width>0</width>
@@ -8381,7 +8381,7 @@ color: white;
                         <number>6</number>
                        </property>
                        <item row="0" column="2">
-                        <widget class="QFrame" name="frame_31">
+                        <widget class="QFrame" name="frame_grafica">
                          <property name="maximumSize">
                           <size>
                            <width>250</width>
@@ -8402,7 +8402,7 @@ image: url(:/grafica/RM78s.png);</string>
                         </widget>
                        </item>
                        <item row="0" column="0">
-                        <widget class="QFrame" name="frame_30">
+                        <widget class="QFrame" name="frame_comparacion">
                          <property name="styleSheet">
                           <string notr="true">background-color: rgb(255, 255, 255);
 border: 2px solid rgb(0, 0, 61);</string>
@@ -8415,7 +8415,7 @@ border: 2px solid rgb(0, 0, 61);</string>
                          </property>
                          <layout class="QVBoxLayout" name="verticalLayout">
                           <item>
-                           <widget class="QFrame" name="frame_32">
+                           <widget class="QFrame" name="frame_comparacion_inter">
                             <property name="styleSheet">
                              <string notr="true">background-color: rgb(255, 255, 255);
 border: none</string>
@@ -8428,7 +8428,7 @@ border: none</string>
                             </property>
                             <layout class="QHBoxLayout" name="horizontalLayout_44">
                              <item>
-                              <widget class="QFrame" name="frame_34">
+                              <widget class="QFrame" name="frame_comparacion_color1">
                                <property name="maximumSize">
                                 <size>
                                  <width>100</width>
@@ -8448,7 +8448,7 @@ border: 2px solid rgb(0, 0, 61);</string>
                               </widget>
                              </item>
                              <item>
-                              <widget class="QFrame" name="frame_36">
+                              <widget class="QFrame" name="frame_comparacion_up_r">
                                <property name="styleSheet">
                                 <string notr="true">border: none</string>
                                </property>
@@ -8483,7 +8483,7 @@ border: 2px solid rgb(0, 0, 61);</string>
                            </widget>
                           </item>
                           <item>
-                           <widget class="QFrame" name="frame_33">
+                           <widget class="QFrame" name="frame_comparacion_down">
                             <property name="styleSheet">
                              <string notr="true">background-color: rgb(255, 255, 255);
 border: none</string>
@@ -8496,7 +8496,7 @@ border: none</string>
                             </property>
                             <layout class="QHBoxLayout" name="horizontalLayout_45">
                              <item>
-                              <widget class="QFrame" name="frame_35">
+                              <widget class="QFrame" name="frame_comparacion_color2">
                                <property name="maximumSize">
                                 <size>
                                  <width>100</width>
@@ -8516,7 +8516,7 @@ border: 2px solid rgb(0, 0, 61);</string>
                               </widget>
                              </item>
                              <item>
-                              <widget class="QFrame" name="frame_37">
+                              <widget class="QFrame" name="frame_comparacion_down_r">
                                <property name="styleSheet">
                                 <string notr="true">border: none</string>
                                </property>
@@ -8554,7 +8554,7 @@ border: 2px solid rgb(0, 0, 61);</string>
                         </widget>
                        </item>
                        <item row="0" column="4">
-                        <widget class="QFrame" name="frame_38">
+                        <widget class="QFrame" name="frame_comparacion_dif">
                          <property name="maximumSize">
                           <size>
                            <width>300</width>
@@ -8573,7 +8573,7 @@ border: 2px solid rgb(0, 0, 61);</string>
                          </property>
                          <layout class="QVBoxLayout" name="verticalLayout_61">
                           <item>
-                           <widget class="QLabel" name="label_13">
+                           <widget class="QLabel" name="label_comparacion_dif1">
                             <property name="font">
                              <font>
                               <family>Circular Std</family>
@@ -8586,7 +8586,7 @@ border: 2px solid rgb(0, 0, 61);</string>
                            </widget>
                           </item>
                           <item>
-                           <widget class="QLabel" name="label_14">
+                           <widget class="QLabel" name="label_comparacion_dif2">
                             <property name="font">
                              <font>
                               <family>Circular Std</family>
@@ -8599,7 +8599,7 @@ border: 2px solid rgb(0, 0, 61);</string>
                            </widget>
                           </item>
                           <item>
-                           <widget class="QLabel" name="label_15">
+                           <widget class="QLabel" name="label_comparacion_diftotal">
                             <property name="font">
                              <font>
                               <family>Circular Std</family>
@@ -8615,7 +8615,7 @@ border: 2px solid rgb(0, 0, 61);</string>
                         </widget>
                        </item>
                        <item row="0" column="1">
-                        <widget class="QFrame" name="frame_39">
+                        <widget class="QFrame" name="frame_void_5">
                          <property name="maximumSize">
                           <size>
                            <width>30</width>
@@ -8631,7 +8631,7 @@ border: 2px solid rgb(0, 0, 61);</string>
                         </widget>
                        </item>
                        <item row="0" column="3">
-                        <widget class="QFrame" name="frame_40">
+                        <widget class="QFrame" name="frame_void_4">
                          <property name="maximumSize">
                           <size>
                            <width>30</width>
@@ -8675,164 +8675,6 @@ border: 2px solid rgb(0, 0, 61);</string>
              <property name="bottomMargin">
               <number>0</number>
              </property>
-             <item>
-              <widget class="QFrame" name="frame_16">
-               <property name="frameShape">
-                <enum>QFrame::StyledPanel</enum>
-               </property>
-               <property name="frameShadow">
-                <enum>QFrame::Raised</enum>
-               </property>
-               <layout class="QHBoxLayout" name="horizontalLayout_39">
-                <property name="spacing">
-                 <number>0</number>
-                </property>
-                <property name="leftMargin">
-                 <number>0</number>
-                </property>
-                <property name="topMargin">
-                 <number>0</number>
-                </property>
-                <property name="rightMargin">
-                 <number>0</number>
-                </property>
-                <property name="bottomMargin">
-                 <number>0</number>
-                </property>
-                <item>
-                 <widget class="QFrame" name="frame_17">
-                  <property name="minimumSize">
-                   <size>
-                    <width>300</width>
-                    <height>0</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>300</width>
-                    <height>16777215</height>
-                   </size>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">background-color: rgb(170, 0, 0);
-color: white;</string>
-                  </property>
-                  <property name="frameShape">
-                   <enum>QFrame::StyledPanel</enum>
-                  </property>
-                  <property name="frameShadow">
-                   <enum>QFrame::Raised</enum>
-                  </property>
-                  <layout class="QVBoxLayout" name="verticalLayout_54">
-                   <property name="topMargin">
-                    <number>32</number>
-                   </property>
-                   <item>
-                    <widget class="QLabel" name="label_4">
-                     <property name="font">
-                      <font>
-                       <family>Circular Std</family>
-                       <pointsize>19</pointsize>
-                       <bold>true</bold>
-                      </font>
-                     </property>
-                     <property name="text">
-                      <string> Cita 1</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QFrame" name="frame_19">
-                  <property name="styleSheet">
-                   <string notr="true">background-color: white;</string>
-                  </property>
-                  <property name="frameShape">
-                   <enum>QFrame::StyledPanel</enum>
-                  </property>
-                  <property name="frameShadow">
-                   <enum>QFrame::Raised</enum>
-                  </property>
-                  <layout class="QVBoxLayout" name="verticalLayout_59">
-                   <property name="topMargin">
-                    <number>32</number>
-                   </property>
-                   <property name="bottomMargin">
-                    <number>16</number>
-                   </property>
-                   <item>
-                    <widget class="QLabel" name="label_6">
-                     <property name="font">
-                      <font>
-                       <family>Circular Std</family>
-                       <pointsize>19</pointsize>
-                       <bold>true</bold>
-                      </font>
-                     </property>
-                     <property name="text">
-                      <string>Gráficos</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QFrame" name="frame_4">
-                  <property name="minimumSize">
-                   <size>
-                    <width>300</width>
-                    <height>0</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>300</width>
-                    <height>16777215</height>
-                   </size>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">background-color: rgb(0, 85, 127);
-color: white;</string>
-                  </property>
-                  <property name="frameShape">
-                   <enum>QFrame::StyledPanel</enum>
-                  </property>
-                  <property name="frameShadow">
-                   <enum>QFrame::Raised</enum>
-                  </property>
-                  <layout class="QVBoxLayout" name="verticalLayout_55">
-                   <property name="topMargin">
-                    <number>32</number>
-                   </property>
-                   <item>
-                    <widget class="QLabel" name="label_5">
-                     <property name="font">
-                      <font>
-                       <family>Circular Std</family>
-                       <pointsize>19</pointsize>
-                       <bold>true</bold>
-                      </font>
-                     </property>
-                     <property name="text">
-                      <string> Cita 2</string>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-               </layout>
-              </widget>
-             </item>
             </layout>
            </widget>
           </widget>
