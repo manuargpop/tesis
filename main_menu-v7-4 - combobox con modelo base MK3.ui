@@ -6809,7 +6809,7 @@ border-radius: 5px;
                 <property name="geometry">
                  <rect>
                   <x>0</x>
-                  <y>-180</y>
+                  <y>-414</y>
                   <width>1209</width>
                   <height>1098</height>
                  </rect>
@@ -7997,7 +7997,7 @@ border: 2px solid rgb(0, 0, 61);</string>
                          </property>
                          <layout class="QGridLayout" name="gridLayout_2">
                           <item row="1" column="2">
-                           <widget class="QLabel" name="label_10">
+                           <widget class="QLabel" name="label_paciente">
                             <property name="minimumSize">
                              <size>
                               <width>0</width>
@@ -8050,7 +8050,7 @@ color: white</string>
                            </widget>
                           </item>
                           <item row="3" column="1">
-                           <widget class="QLabel" name="lbl_est_citas">
+                           <widget class="QLabel" name="label_cita1">
                             <property name="minimumSize">
                              <size>
                               <width>0</width>
@@ -8109,7 +8109,7 @@ color: white</string>
                            </widget>
                           </item>
                           <item row="4" column="1">
-                           <widget class="QComboBox" name="comboBox_3">
+                           <widget class="QComboBox" name="combobox_cita1">
                             <property name="minimumSize">
                              <size>
                               <width>0</width>
@@ -8151,7 +8151,7 @@ background-color: rgb(255, 255, 255);
                            </widget>
                           </item>
                           <item row="3" column="2">
-                           <widget class="QLabel" name="label_9">
+                           <widget class="QLabel" name="label_cita2">
                             <property name="minimumSize">
                              <size>
                               <width>0</width>
@@ -8229,7 +8229,7 @@ background-color: rgb(255, 255, 255);
                            </widget>
                           </item>
                           <item row="4" column="2">
-                           <widget class="QComboBox" name="comboBox">
+                           <widget class="QComboBox" name="combobox_cita2">
                             <property name="minimumSize">
                              <size>
                               <width>0</width>
@@ -8252,7 +8252,7 @@ background-color: rgb(255, 255, 255);
                            </widget>
                           </item>
                           <item row="3" column="3">
-                           <widget class="QLabel" name="label_16">
+                           <widget class="QLabel" name="label_dato">
                             <property name="font">
                              <font>
                               <family>Circular Std</family>
@@ -8274,7 +8274,7 @@ color: white</string>
                            </widget>
                           </item>
                           <item row="4" column="3">
-                           <widget class="QComboBox" name="comboBox_4">
+                           <widget class="QComboBox" name="combobox_dato">
                             <property name="minimumSize">
                              <size>
                               <width>0</width>
@@ -8460,7 +8460,7 @@ border: 2px solid rgb(0, 0, 61);</string>
                                </property>
                                <layout class="QVBoxLayout" name="verticalLayout_52">
                                 <item>
-                                 <widget class="QLabel" name="label_11">
+                                 <widget class="QLabel" name="label_dato1">
                                   <property name="font">
                                    <font>
                                     <family>Circular Std</family>
@@ -8528,7 +8528,7 @@ border: 2px solid rgb(0, 0, 61);</string>
                                </property>
                                <layout class="QVBoxLayout" name="verticalLayout_60">
                                 <item>
-                                 <widget class="QLabel" name="label_12">
+                                 <widget class="QLabel" name="label_dato2">
                                   <property name="font">
                                    <font>
                                     <family>Circular Std</family>
