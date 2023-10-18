@@ -23,57 +23,57 @@ def inicio():
         return edad
 
     # funcion para llenar la lista de cita 1 y 2 y la lista de datos a comparar
-    # def cambio_paciente(max):
-    #     contenido_raw = combobox_paciente1.currentText()
-    #     contenido_split = contenido_raw.split
-    #     contenido = contenido_split[1]
-    #     tipo = contenido_split[2]
-    #     datos_adulto = ("0 ESTATURA", "1 PESO", "2 PROFUNDIDAD ABDOMINAL", "3 PLIEGUES TRICEPS",
-    #                     "4 PLIEGUES SUBESCAPULAR", "5 PLIEGUES BICEPS", "6 PLIEGUES CRESTA ILIACA",
-    #                     "7 PERIMETRO BRAZO RELAJADO", "8 PERIMETRO BRAZO FLEXIONADO CONTRAIDO", "9 PERIMETRO MUÑECA",
-    #                     "10 PERIMETRO MINIMO CINTURA", "11 PERIMETRO ABDOMINAL", "12 PERIMETRO CADERAS")
-    #     datos_atleta = ("0 ESTATURA", "1 PESO", "2 PROFUNDIDAD ABDOMINAL",
-    #                     "3 PLIEGUES TRICEPS", "4 PLIEGUES CRESTA ILIACA", "5 PERIMETRO CINTURA MINIMA"
-    #                     "6 PLIEGUES ABDOMINAL", "7 PERIMETRO BRAZO FLEXIONADO CONTRAIDO",
-    #                     "8 PERIMETRO ABDOMINAL", "9 PERIMETRO MUSLO MEDIO")
-    #
-    #     if tipo == "Adulto":
-    #         contador_tipo = 0
-    #         while contador_tipo < 13:
-    #             # combobox_dato.addItem(datos_adulto[contador_tipo])
-    #             print(datos_adulto[contador_tipo])
-    #             contador_tipo += 1
-    #         print("done")
-    #     elif tipo == "Atleta":
-    #         contador_tipo = 0
-    #         while contador_tipo < 11:
-    #             # combobox_dato.addItem(datos_atleta[contador_tipo])
-    #             print(datos_adulto[contador_tipo])
-    #             contador_tipo += 1
-    #         print("done")
-    #     contador_p = 0
-    #     contador_c = 0
-    #     while contador_p < max:
-    #         if contenido == all_data[contador_p][3]:
-    #             print("good paciente")
-    #             while contador_c < len(all_data[contador_p][1]):
-    #                 if contador_c != 0:
-    #                     # combobox_cita1.addItem(str(contador_c),str(all_data[contador_p][1][contador_c][13]),
-    #                     # str(all_data[contador_p][1][contador_c][14]))
-    #                     # combobox_cita2.addItem(str(contador_c),str(all_data[contador_p][1][contador_c][13]),
-    #                     # str(all_data[contador_p][1][contador_c][14]))
-    #                     contador_c += 1
-    #                 else:
-    #                     # combobox_cita1.addItem(str(contador_c)str(all_data[contador_p][4]),
-    #                     # str(all_data[contador_p][5]))
-    #                     # combobox_cita2.addItem(str(contador_c)str(all_data[contador_p][4]),
-    #                     # str(all_data[contador_p][5]))
-    #                     contador_c += 1
-    #             else:
-    #                 contador_p += 1
-    #         else:
-    #             contador_p += 1
-    #             print("no es el paciente")
+    def cambio_paciente(max):
+        contenido_raw = combobox_paciente1.currentText()
+        contenido_split = contenido_raw.split
+        contenido = contenido_split[1]
+        tipo = contenido_split[2]
+        datos_adulto = ("0 ESTATURA", "1 PESO", "2 PROFUNDIDAD ABDOMINAL", "3 PLIEGUES TRICEPS",
+                        "4 PLIEGUES SUBESCAPULAR", "5 PLIEGUES BICEPS", "6 PLIEGUES CRESTA ILIACA",
+                        "7 PERIMETRO BRAZO RELAJADO", "8 PERIMETRO BRAZO FLEXIONADO CONTRAIDO", "9 PERIMETRO MUÑECA",
+                        "10 PERIMETRO MINIMO CINTURA", "11 PERIMETRO ABDOMINAL", "12 PERIMETRO CADERAS")
+        datos_atleta = ("0 ESTATURA", "1 PESO", "2 PROFUNDIDAD ABDOMINAL",
+                        "3 PLIEGUES TRICEPS", "4 PLIEGUES CRESTA ILIACA", "5 PERIMETRO CINTURA MINIMA"
+                        "6 PLIEGUES ABDOMINAL", "7 PERIMETRO BRAZO FLEXIONADO CONTRAIDO",
+                        "8 PERIMETRO ABDOMINAL", "9 PERIMETRO MUSLO MEDIO")
+    
+        if tipo == "Adulto":
+            contador_tipo = 0
+            while contador_tipo < 13:
+                combobox_dato.addItem(datos_adulto[contador_tipo])
+                print(datos_adulto[contador_tipo])
+                contador_tipo += 1
+            print("done")
+        elif tipo == "Atleta":
+            contador_tipo = 0
+            while contador_tipo < 11:
+                combobox_dato.addItem(datos_atleta[contador_tipo])
+                print(datos_adulto[contador_tipo])
+                contador_tipo += 1
+            print("done")
+        contador_p = 0
+        contador_c = 0
+        while contador_p < max:
+            if contenido == all_data[contador_p][3]:
+                print("good paciente")
+                while contador_c < len(all_data[contador_p][1]):
+                    if contador_c != 0:
+                        combobox_cita1.addItem(str(contador_c),str(all_data[contador_p][1][contador_c][13]),
+                        str(all_data[contador_p][1][contador_c][14]))
+                        combobox_cita2.addItem(str(contador_c),str(all_data[contador_p][1][contador_c][13]),
+                        str(all_data[contador_p][1][contador_c][14]))
+                        contador_c += 1
+                    else:
+                        combobox_cita1.addItem(str(contador_c)str(all_data[contador_p][4]),
+                        str(all_data[contador_p][5]))
+                        combobox_cita2.addItem(str(contador_c)str(all_data[contador_p][4]),
+                        str(all_data[contador_p][5]))
+                        contador_c += 1
+                else:
+                    contador_p += 1
+            else:
+                contador_p += 1
+                print("no es el paciente")
 
     def comparar():
         fix_atl = [0, 1, 2, 6, 9, 11, 15, 17, 18, 27]
@@ -91,11 +91,11 @@ def inicio():
 
 
     data = []
-    ##el contador contiene = pacientes adultos, pacientes atletas, pacientes totales, hombres, mujeres
+    # el contador contiene = pacientes adultos, pacientes atletas, pacientes totales, hombres, mujeres
     contadores = [0, 0, 0, 0, 0, 0]
     edad_total = 0
     edad_prom = 0
-    ##esto lee los pacientes del txt y los saca
+    # esto lee los pacientes del txt y los saca
     with open(f'pacientes.txt', 'rb') as file_new_d:
         while True:
             try:
@@ -130,9 +130,9 @@ def inicio():
     # nota: no tienes que usar los 4, solo usa los nesezarios
     # print(all_data[0][1][0][1])
     # por ejemplo arriba llamame a primo josue, dame todas sus medidas, solo las de la cita 1, solo su peso
-    print(all_data[1][2])
+    # print(all_data[1][2])
 
-    ##esto llama a los pacientes y los cuenta el total ademas de contar por tipos de paciente y los asigna en sus label
+    #esto llama a los pacientes y los cuenta el total ademas de contar por tipos de paciente y los asigna en sus label
     for position, datos in enumerate(data):
         if str(datos.__dict__.get('t_pac')) == "Adulto":
             contadores[0] += 1
@@ -142,27 +142,27 @@ def inicio():
             contadores[2] += 1
         else:
             print("error")
-    # self.lbl_patient_adulto_count.setText(contadores[0])
-    # self.lbl_patient_atleta_count.setText(contadores[1])
-    # self.lbl_patient_total.setText(contadores[2])
+    self.lbl_patient_adulto_count.setText(contadores[0])
+    self.lbl_patient_atleta_count.setText(contadores[1])
+    self.lbl_patient_total.setText(contadores[2])
 
-    ##esto calcula la edad promedio de los pacientes (no esta listo) y lo asigna en su label
+    #esto calcula la edad promedio de los pacientes (no esta listo) y lo asigna en su label
 
-    # for position, datos in enumerate(data):
-    #     edad_total += getedad(str(datos.__dict__.get('fnacimiento')), str(datos.__dict__.get('fecha')))
-    # edad_prom = edad_total / contadores[2]
-    # self.lbl_edad_promedio.setText(edad_prom)
+    for position, datos in enumerate(data):
+        edad_total += getedad(str(datos.__dict__.get('fnacimiento')), str(datos.__dict__.get('fecha')))
+    edad_prom = edad_total / contadores[2]
+    self.lbl_edad_promedio.setText(edad_prom)
 
-    ##esto calcula cuantos pacientes hombres y mujeres hay en el sistema y los coloca en sus labels
+    #esto calcula cuantos pacientes hombres y mujeres hay en el sistema y los coloca en sus labels
     for position, datos in enumerate(data):
         if str(datos.__dict__.get('sex')) == "Hombre":
             contadores[3] += 1
         elif str(datos.__dict__.get('sex')) == "Mujer":
             contadores[4] += 1
-    # self.lbl_cant_hombres.setText(contadores[3])
-    # self.lbl_cant_mujeres.setText(contadores[4])
+    self.lbl_cant_hombres.setText(contadores[3])
+    self.lbl_cant_mujeres.setText(contadores[4])
 
-    ##calcula la cantidad total de citas y la escribe en su label
+    #calcula la cantidad total de citas y la escribe en su label
 
     for position, datos in enumerate(data):
         if str(datos.__dict__.get('t_pac')) == "Adulto":
@@ -171,21 +171,21 @@ def inicio():
             contadores[5] += len(datos.get_medidas())
         else:
             print("error")
-    # self.lbl_cita_total.setText(contadores[4])
+    self.lbl_cita_total.setText(contadores[4])
 
-    ##esto llena la combobox de paciente con los pacientes
+    #esto llena la combobox de paciente con los pacientes
 
-    # for position, datos in enumerate(data):
-    #     combobox_paciente1.addItem(str(datos.__dict__.get('name')), str(datos.__dict__.get('doc')),
-    #     str(datos.__dict__.get('t_pac')))
+    for position, datos in enumerate(data):
+        combobox_paciente1.addItem(str(datos.__dict__.get('name')), str(datos.__dict__.get('doc')),
+        str(datos.__dict__.get('t_pac')))
 
     # al seleccionar un paciente empieza a cargar las citas de este y que datos puede comparar
 
-    # combobox_paciente1.currentTextChanged.connect(self.cambio_paciente(contador[2]))
+    combobox_paciente1.currentTextChanged.connect(self.cambio_paciente(contador[2]))
 
-    #cambio_paciente(contadores[2])
+    cambio_paciente(contadores[2])
 
-    #self.btn_comparar.clicked.connect(comparar())
+    self.btn_comparar.clicked.connect(comparar())
 
 
 class Patient:
